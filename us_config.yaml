@@ -1,0 +1,74 @@
+# US swing scanner settings (read by us_screener.py). Edit these instead of the code.
+
+capital_inr: 200000        # trading capital in ₹, converted to USD at the latest USD-INR rate
+capital_usd: null          # put a number here (e.g. 2300) to use a fixed USD amount instead
+fallback_usd_inr: 88.0     # used only if the live USD-INR rate can't be downloaded
+risk_pct: 1.0              # max risk per trade, % of capital
+max_position_pct: 25       # max % of capital in one stock
+fractional_shares: true    # quantity rounded down to 0.01 share; false = whole shares only
+round_trip_cost_pct: 0.3   # brokerage + FX markup + SEC/FINRA fees, % of position (used in R:R)
+max_stop_pct: 5            # widest stop allowed, % below entry
+max_target_pct: 10         # target cap, % above entry
+min_rr: 2.0                # minimum reward:risk AFTER costs
+min_price: 5               # skip stocks below this price, $
+max_pct_of_adv: 1.0        # position must be ≤ this % of 20-day average daily dollar volume
+min_history_bars: 220      # ~10.5 months of trading; also excludes IPOs from the last 6 months
+max_short_pct_float: 20    # exclude crowded shorts above this short interest, % of float
+max_days_to_cover: 10      # ...or above this days-to-cover
+earnings_window_days: 10   # trading days ahead to check for earnings
+candidates_per_category: 5 # ranked candidates handed to Claude per category
+profile_checks_per_category: 8   # top-ranked stocks per category checked for short interest / fund type / earnings
+history_period: 2y         # price history to download
+
+categories:
+  SP500:
+    label: S&P 500
+    holdings_url: https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf/1467271812596.ajax?fileType=csv&fileName=IVV_holdings&dataType=fund
+    wikipedia_url: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+    min_size: 450
+    category_etf: null     # relative strength vs SPY already covers the large caps
+    min_adv_usd_m: 50
+    min_avg_shares: 0
+    atr_pct: [1.0, 3.0]
+    min_target_pct: 3
+    breakout_volume_x: 1.3
+    flag_binary_events: false
+
+  SP400:
+    label: MidCap 400
+    holdings_url: https://www.ishares.com/us/products/239763/ishares-core-sp-midcap-etf/1467271812596.ajax?fileType=csv&fileName=IJH_holdings&dataType=fund
+    wikipedia_url: https://en.wikipedia.org/wiki/List_of_S%26P_400_companies
+    min_size: 360
+    category_etf: IJH
+    min_adv_usd_m: 10
+    min_avg_shares: 0
+    atr_pct: [1.5, 4.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    flag_binary_events: false
+
+  SP600:
+    label: SmallCap 600
+    holdings_url: https://www.ishares.com/us/products/239774/ishares-core-sp-smallcap-etf/1467271812596.ajax?fileType=csv&fileName=IJR_holdings&dataType=fund
+    wikipedia_url: https://en.wikipedia.org/wiki/List_of_S%26P_600_companies
+    min_size: 540
+    category_etf: IJR
+    min_adv_usd_m: 3
+    min_avg_shares: 100000
+    atr_pct: [2.0, 6.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    flag_binary_events: true   # small biotechs: Claude checks FDA / trial dates
+
+  MICRO:
+    label: Microcap
+    holdings_url: https://www.ishares.com/us/products/239716/ishares-microcap-etf/1467271812596.ajax?fileType=csv&fileName=IWC_holdings&dataType=fund
+    wikipedia_url: null    # no public list; falls back to the copy saved in data/us_constituents/
+    min_size: 500
+    category_etf: IWC
+    min_adv_usd_m: 1
+    min_avg_shares: 100000
+    atr_pct: [2.0, 6.0]
+    min_target_pct: 4
+    breakout_volume_x: 1.5
+    flag_binary_events: true
