@@ -1,6 +1,6 @@
 # US swing scan — 2026-10-22
 Status: **ok** — scan complete  
-Generated 2026-10-23 14:02 ET / 2026-10-23 23:32 IST
+Generated 2026-10-23 14:16 ET / 2026-10-23 23:46 IST
 
 Capital $2120.61 (₹200,000 ÷ 94.31), risk $21.21 per trade, max position $530.15
 
@@ -13,15 +13,15 @@ Capital $2120.61 (₹200,000 ÷ 94.31), risk $21.21 per trade, max position $530
     "otherlisted": "ok (7674 symbols)"
   },
   "constituents": {
-    "SP500": "downloaded (Wikipedia, 503 stocks)",
-    "SP400": "downloaded (Wikipedia, 400 stocks)",
-    "SP600": "downloaded (Wikipedia, 603 stocks)",
-    "MICRO": "MISSING (download failed: iShares holdings: no 'Ticker' header row in holdings file)"
+    "SP500": "downloaded (Wikipedia, 503 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+    "SP400": "downloaded (Wikipedia, 400 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+    "SP600": "downloaded (Wikipedia, 603 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+    "MICRO": "downloaded (PROXY: Nasdaq screener, market cap $50M–$300M, price ≥ $5, 445 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']"
   },
   "prices": {
     "source": "Yahoo Finance (yfinance)",
-    "requested": 1503,
-    "received": 1502,
+    "requested": 1948,
+    "received": 1947,
     "missing": [
       "CWEN-A"
     ]
@@ -43,11 +43,12 @@ Capital $2120.61 (₹200,000 ÷ 94.31), risk $21.21 per trade, max position $530
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
 | KDP | 52-week high breakout | 35.19 | LMT 35.19 | 34.06 | 38.38 | 15.06 | 2.5 | 7.42 | ⚠ Earnings on 2026-11-03 BMO |
-| NDAQ | 52-week high breakout | 103.3 | LMT 103.3 | 99.77 | 113.21 | 2.56 | 2.5 | 6.41 | ⚠ Earnings on 2026-10-22 |
-| ELV | Inside bar near resistance | 445.28 | BS 450.85 | 433.1 | 495.94 | 1.17 | 2.29 | 5.0 | unverified: earnings date |
+| NDAQ | 52-week high breakout | 103.3 | LMT 103.3 | 99.77 | 113.21 | 5.13 | 2.5 | 7.41 |  |
+| ELV | Inside bar near resistance | 445.28 | BS 450.85 | 433.1 | 495.94 | 1.17 | 2.29 | 5.0 |  |
 | AAPL | Pullback to 20 EMA | 348.22 | LMT 348.22 | 338.06 | 377.28 | 1.52 | 2.5 | 5.0 | ⚠ Earnings on 2026-11-02 AMC |
 | XOM | Bull flag / tight consolidation | 178.23 | BS 180.62 | 174.25 | 198.44 | 2.93 | 2.5 | 4.0 | ⚠ Earnings on 2026-10-30 BMO |
 Funnel: universe 503 → enough price history 500 → price floor 500 → listing checks 499 → no reverse split / wild gaps 496 → liquidity 493 → primary uptrend (50 EMA, 200) 209 → 20 EMA 200 → 3M relative strength vs SPY > 0 142 → RSI 40-75 109 → named setup 45 → not overextended 44 → ATR band 35 → stop within limit 32 → target & R:R after costs 6 → position size 6 → short interest / fund type 6
+Target step failures: resistance too close 21, R:R after costs < min 5
 
 ## MidCap 400 — 3 of 400 passed all filters; top 3 profile-checked, 3 shown
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
@@ -56,6 +57,7 @@ Funnel: universe 503 → enough price history 500 → price floor 500 → listin
 | CRBG | Pullback to 20 EMA | 35.59 | LMT 35.59 | 34.13 | 39.15 | 14.52 | 2.2 | 4.5 | ⚠ Earnings on 2026-11-02 AMC |
 | AMG | Pullback to 20 EMA | 395.53 | LMT 395.53 | 379.19 | 435.08 | 1.29 | 2.19 | 4.5 | ⚠ Earnings on 2026-11-02 BMO |
 Funnel: universe 400 → enough price history 400 → price floor 400 → listing checks 398 → no reverse split / wild gaps 398 → liquidity 398 → primary uptrend (50 EMA, 200) 142 → 20 EMA 135 → 3M relative strength vs SPY > 0 98 → RSI 40-75 86 → named setup 34 → not overextended 32 → ATR band 27 → stop within limit 19 → target & R:R after costs 3 → position size 3 → short interest / fund type 3
+Target step failures: resistance too close 12, R:R after costs < min 4
 
 ## SmallCap 600 — 5 of 600 passed all filters; top 6 profile-checked, 5 shown
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
@@ -66,7 +68,12 @@ Funnel: universe 400 → enough price history 400 → price floor 400 → listin
 | URBN | Bull flag / tight consolidation | 88.29 | BS 90.77 | 86.89 | 99.85 | 5.46 | 2.12 | 4.0 |  |
 | MMSI | Pullback to 20 EMA | 93.94 | LMT 93.94 | 90.4 | 103.33 | 2.82 | 2.38 | 3.5 | ⚠ Earnings on 2026-10-29 AMC |
 Funnel: universe 600 → enough price history 590 → price floor 576 → listing checks 574 → no reverse split / wild gaps 573 → liquidity 567 → primary uptrend (50 EMA, 200) 218 → 20 EMA 208 → 3M relative strength vs SPY > 0 126 → RSI 40-75 103 → named setup 50 → not overextended 47 → ATR band 43 → stop within limit 20 → target & R:R after costs 6 → position size 6 → short interest / fund type 5
+Target step failures: resistance too close 13, R:R after costs < min 1
 
-## Microcap — 0 of 0 passed all filters; top 0 profile-checked, 0 shown
-NO TRADE — closest: None (failed: None — None)
-Funnel: universe 0 → enough price history 0 → price floor 0 → listing checks 0 → no reverse split / wild gaps 0 → liquidity 0 → primary uptrend (50 EMA, 200) 0 → 20 EMA 0 → 3M relative strength vs SPY > 0 0 → RSI 40-75 0 → named setup 0 → not overextended 0 → ATR band 0 → stop within limit 0 → target & R:R after costs 0 → position size 0 → short interest / fund type 0
+## Microcap — 1 of 445 passed all filters; top 1 profile-checked, 1 shown
+| Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
+|---|---|---|---|---|---|---|---|---|---|
+| FF | NR7 near resistance | 5.52 | BS 5.61 | 5.4 | 6.17 | 94.5 | 2.39 | 4.0 |  |
+_Universe is a market-cap PROXY, not index membership._
+Funnel: universe 445 → enough price history 417 → price floor 417 → listing checks 399 → no reverse split / wild gaps 363 → liquidity 120 → primary uptrend (50 EMA, 200) 26 → 20 EMA 24 → 3M relative strength vs SPY > 0 22 → RSI 40-75 19 → named setup 8 → not overextended 7 → ATR band 6 → stop within limit 4 → target & R:R after costs 1 → position size 1 → short interest / fund type 1
+Target step failures: resistance too close 3, R:R after costs < min 0

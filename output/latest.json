@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "market_region": "US",
-  "generated_at_ist": "2026-10-23 23:32",
-  "generated_at_et": "2026-10-23 14:02",
+  "generated_at_ist": "2026-10-23 23:46",
+  "generated_at_et": "2026-10-23 14:16",
   "run_date": "2026-10-22",
   "data_date": "2026-10-22",
   "settings": {
@@ -27,15 +27,15 @@
       "otherlisted": "ok (7674 symbols)"
     },
     "constituents": {
-      "SP500": "downloaded (Wikipedia, 503 stocks)",
-      "SP400": "downloaded (Wikipedia, 400 stocks)",
-      "SP600": "downloaded (Wikipedia, 603 stocks)",
-      "MICRO": "MISSING (download failed: iShares holdings: no 'Ticker' header row in holdings file)"
+      "SP500": "downloaded (Wikipedia, 503 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "SP400": "downloaded (Wikipedia, 400 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "SP600": "downloaded (Wikipedia, 603 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "MICRO": "downloaded (PROXY: Nasdaq screener, market cap $50M–$300M, price ≥ $5, 445 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']"
     },
     "prices": {
       "source": "Yahoo Finance (yfinance)",
-      "requested": 1503,
-      "received": 1502,
+      "requested": 1948,
+      "received": 1947,
       "missing": [
         "CWEN-A"
       ]
@@ -96,7 +96,7 @@
     "breadth": {
       "sp500_pct_above_50ema": 64.4,
       "sp500_pct_above_200ema": 61.2,
-      "universe_pct_above_50ema": 55.0
+      "universe_pct_above_50ema": 49.87
     },
     "vix": {
       "level": 19.03,
@@ -235,6 +235,8 @@
     "SP500": {
       "label": "S&P 500",
       "universe_size": 503,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 503 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
       "passed_all_hard_filters": 6,
       "profile_checked": 6,
       "candidates": [
@@ -295,7 +297,7 @@
             "country": "United States",
             "sector": "Consumer Defensive",
             "industry": "Beverages - Non-Alcoholic",
-            "market_cap": 47227469824,
+            "market_cap": 47213858816,
             "float_shares": 1354389331,
             "inst_pct": 109.73,
             "short_pct_float": 6.03,
@@ -314,9 +316,7 @@
           "symbol": "NDAQ",
           "passed": true,
           "steps_passed": 16,
-          "flags": [
-            "⚠ Earnings on 2026-10-22"
-          ],
+          "flags": [],
           "unverified": [],
           "last_close": 103.3,
           "exchange": "Nasdaq",
@@ -347,10 +347,10 @@
           "rr": 2.81,
           "rr_after_costs": 2.5,
           "nearest_resistance": null,
-          "qty": 2.56,
-          "position_value": 264.45,
-          "risk_amount": 9.04,
-          "score": 6.41,
+          "qty": 5.13,
+          "position_value": 529.93,
+          "risk_amount": 18.11,
+          "score": 7.41,
           "score_notes": [
             "1M RS+",
             "RSI fits breakout",
@@ -360,7 +360,6 @@
             "near 52W high",
             "float ≥10M",
             "inst ≥20%",
-            "earnings in first 5 days (−1)",
             "already reported"
           ],
           "adx": 16.92,
@@ -371,7 +370,7 @@
             "country": "United States",
             "sector": "Financial Services",
             "industry": "Financial Data & Stock Exchanges",
-            "market_cap": 57756332032,
+            "market_cap": 57904459776,
             "float_shares": 496459692,
             "inst_pct": 87.31,
             "short_pct_float": 2.02,
@@ -379,12 +378,6 @@
             "ttm_eps": 3.66,
             "net_debt_to_ebitda": 2.49
           },
-          "next_earnings": {
-            "date": "2026-10-22",
-            "timing": null,
-            "trading_days_ahead": 0
-          },
-          "qty_note": "halved: earnings in first 5 trading days",
           "last_earnings": "2026-10-22",
           "name": "Nasdaq, Inc."
         },
@@ -393,9 +386,7 @@
           "passed": true,
           "steps_passed": 16,
           "flags": [],
-          "unverified": [
-            "earnings date"
-          ],
+          "unverified": [],
           "last_close": 445.28,
           "exchange": "NYSE",
           "adv_usd_m": 552.11,
@@ -443,7 +434,7 @@
             "country": "United States",
             "sector": "Healthcare",
             "industry": "Healthcare Plans",
-            "market_cap": 96032980992,
+            "market_cap": 96100204544,
             "float_shares": 215561123,
             "inst_pct": 94.46,
             "short_pct_float": 2.51,
@@ -509,7 +500,7 @@
             "country": "United States",
             "sector": "Technology",
             "industry": "Consumer Electronics",
-            "market_cap": 5056883589120,
+            "market_cap": 5054110629888,
             "float_shares": 14569078010,
             "inst_pct": 66.34,
             "short_pct_float": 0.83,
@@ -578,7 +569,7 @@
             "country": "United States",
             "sector": "Energy",
             "industry": "Oil & Gas Integrated",
-            "market_cap": 750259470336,
+            "market_cap": 750547304448,
             "float_shares": 4103811493,
             "inst_pct": 67.24,
             "short_pct_float": 1.07,
@@ -664,11 +655,17 @@
           "step": "short interest / fund type",
           "remaining": 6
         }
-      ]
+      ],
+      "target_step_failures": {
+        "resistance too close": 21,
+        "R:R after costs < min": 5
+      }
     },
     "SP400": {
       "label": "MidCap 400",
       "universe_size": 400,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 400 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
       "passed_all_hard_filters": 3,
       "profile_checked": 3,
       "candidates": [
@@ -728,7 +725,7 @@
             "country": "United States",
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "market_cap": 14194732032,
+            "market_cap": 14224736256,
             "float_shares": 252964343,
             "inst_pct": 100.84,
             "short_pct_float": 2.29,
@@ -799,7 +796,7 @@
             "country": "United States",
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "market_cap": 15055835136,
+            "market_cap": 15102641152,
             "float_shares": 267521464,
             "inst_pct": 115.27,
             "short_pct_float": 5.49,
@@ -870,7 +867,7 @@
             "country": "United States",
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "market_cap": 10050850816,
+            "market_cap": 10071796736,
             "float_shares": 24845965,
             "inst_pct": 100.63,
             "short_pct_float": 5.25,
@@ -956,11 +953,17 @@
           "step": "short interest / fund type",
           "remaining": 3
         }
-      ]
+      ],
+      "target_step_failures": {
+        "resistance too close": 12,
+        "R:R after costs < min": 4
+      }
     },
     "SP600": {
       "label": "SmallCap 600",
       "universe_size": 600,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 603 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
       "passed_all_hard_filters": 5,
       "profile_checked": 6,
       "candidates": [
@@ -1024,7 +1027,7 @@
             "country": "United States",
             "sector": "Financial Services",
             "industry": "Banks - Regional",
-            "market_cap": 4421680128,
+            "market_cap": 4425872384,
             "float_shares": 119175169,
             "inst_pct": 89.44,
             "short_pct_float": 6.01,
@@ -1101,7 +1104,7 @@
             "country": "United States",
             "sector": "Healthcare",
             "industry": "Medical Care Facilities",
-            "market_cap": 2375033088,
+            "market_cap": 2379908352,
             "float_shares": 77985940,
             "inst_pct": 106.98,
             "short_pct_float": 8.09,
@@ -1172,7 +1175,7 @@
             "country": "United States",
             "sector": "Healthcare",
             "industry": "Medical Instruments & Supplies",
-            "market_cap": 4127286528,
+            "market_cap": 4128912128,
             "float_shares": 24556661,
             "inst_pct": 115.91,
             "short_pct_float": 7.29,
@@ -1240,7 +1243,7 @@
             "country": "United States",
             "sector": "Consumer Cyclical",
             "industry": "Apparel Retail",
-            "market_cap": 7431877632,
+            "market_cap": 7411318784,
             "float_shares": 56148535,
             "inst_pct": 74.52,
             "short_pct_float": 12.44,
@@ -1312,7 +1315,7 @@
             "country": "United States",
             "sector": "Healthcare",
             "industry": "Medical Instruments & Supplies",
-            "market_cap": 5575758848,
+            "market_cap": 5579938816,
             "float_shares": 58301851,
             "inst_pct": 108.01,
             "short_pct_float": 8.22,
@@ -1399,85 +1402,164 @@
           "step": "short interest / fund type",
           "remaining": 5
         }
-      ]
+      ],
+      "target_step_failures": {
+        "resistance too close": 13,
+        "R:R after costs < min": 1
+      }
     },
     "MICRO": {
       "label": "Microcap",
-      "universe_size": 0,
-      "passed_all_hard_filters": 0,
-      "profile_checked": 0,
-      "candidates": [],
+      "universe_size": 445,
+      "membership_proxy": true,
+      "universe_source": "downloaded (PROXY: Nasdaq screener, market cap $50M–$300M, price ≥ $5, 445 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "passed_all_hard_filters": 1,
+      "profile_checked": 1,
+      "candidates": [
+        {
+          "symbol": "FF",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [],
+          "unverified": [],
+          "last_close": 5.52,
+          "exchange": "NYSE",
+          "adv_usd_m": 1.88,
+          "avg_volume_shares": 352120.0,
+          "volume_ratio": 1.83,
+          "rs_1m_pct": 6.89,
+          "rs_3m_pct": 14.82,
+          "rsi": 57.94,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 2.64,
+          "ret_5d_pct": -2.3,
+          "atr_pct": 3.55,
+          "entry": 5.61,
+          "stop": 5.4,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 3.74,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 6.17,
+          "target_basis": "just below resistance 6.99",
+          "target_pct": 9.98,
+          "rr": 2.67,
+          "rr_after_costs": 2.39,
+          "nearest_resistance": 6.99,
+          "qty": 94.5,
+          "position_value": 530.14,
+          "risk_amount": 19.84,
+          "rs_1m_vs_category_pct": 12.49,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IWC 1M",
+            "MACD near/above 0",
+            "stop under swing low",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 26.78,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "FutureFuel Corp.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Basic Materials",
+            "industry": "Specialty Chemicals",
+            "market_cap": 248924352,
+            "float_shares": 26021036,
+            "inst_pct": 39.46,
+            "short_pct_float": 5.0,
+            "days_to_cover": 3.75,
+            "ttm_eps": -0.7,
+            "net_debt_to_ebitda": null
+          },
+          "next_earnings": {
+            "date": "2026-11-09",
+            "timing": "AMC",
+            "trading_days_ahead": 12
+          },
+          "name": "FutureFuel Corp."
+        }
+      ],
       "closest_miss": null,
       "funnel": [
         {
           "step": "universe",
-          "remaining": 0
+          "remaining": 445
         },
         {
           "step": "enough price history",
-          "remaining": 0
+          "remaining": 417
         },
         {
           "step": "price floor",
-          "remaining": 0
+          "remaining": 417
         },
         {
           "step": "listing checks",
-          "remaining": 0
+          "remaining": 399
         },
         {
           "step": "no reverse split / wild gaps",
-          "remaining": 0
+          "remaining": 363
         },
         {
           "step": "liquidity",
-          "remaining": 0
+          "remaining": 120
         },
         {
           "step": "primary uptrend (50 EMA, 200)",
-          "remaining": 0
+          "remaining": 26
         },
         {
           "step": "20 EMA",
-          "remaining": 0
+          "remaining": 24
         },
         {
           "step": "3M relative strength vs SPY > 0",
-          "remaining": 0
+          "remaining": 22
         },
         {
           "step": "RSI 40-75",
-          "remaining": 0
+          "remaining": 19
         },
         {
           "step": "named setup",
-          "remaining": 0
+          "remaining": 8
         },
         {
           "step": "not overextended",
-          "remaining": 0
+          "remaining": 7
         },
         {
           "step": "ATR band",
-          "remaining": 0
+          "remaining": 6
         },
         {
           "step": "stop within limit",
-          "remaining": 0
+          "remaining": 4
         },
         {
           "step": "target & R:R after costs",
-          "remaining": 0
+          "remaining": 1
         },
         {
           "step": "position size",
-          "remaining": 0
+          "remaining": 1
         },
         {
           "step": "short interest / fund type",
-          "remaining": 0
+          "remaining": 1
         }
-      ]
+      ],
+      "target_step_failures": {
+        "resistance too close": 3,
+        "R:R after costs < min": 0
+      }
     }
   }
 }
