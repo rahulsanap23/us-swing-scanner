@@ -63,6 +63,10 @@ last high (inside bar, NR7, flag).
 
 - Free data can fail. Yahoo can throttle ~3,000 tickers; `data_checks` in the output shows how many
   were received, and checks that couldn't be done are marked `unverified` instead of guessed.
+- Index lists: iShares holdings files first (ishares.com, then blackrock.com). If those are refused, the
+  S&P lists come from Wikipedia and the Microcap list falls back to a market-cap proxy ($50M–$300M,
+  price ≥ $5, from the Nasdaq screener), marked `PROXY` in the output; the last good list is saved in
+  `data/constituents/` and reused if every source fails.
 - GitHub can pause scheduled workflows in a public repo after 60 days with no activity. The daily
   commits normally prevent that; if runs stop, re-enable the workflow in the Actions tab.
 - The logic was tested on generated data (`tests/`). Check `output/latest.md` after the first live runs.

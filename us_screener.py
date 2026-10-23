@@ -439,24 +439,86 @@ def fetch_regsho(client, data_date: dt.date):
     return None, "FAILED: " + "; ".join(errs[:2])
 
 
+def _num(x):
+    s = re.sub(r"[^0-9.\-]", "", str(x if x is not None else ""))
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def parse_nasdaq_screener(js: dict, lo_usd: float, hi_usd: float, min_price: float) -> list[dict]:
+    """Nasdaq.com stock screener JSON -> stocks whose market cap is in [lo, hi] and price >= min."""
+    data = (js or {}).get("data") or {}
+    rows = data.get("rows") or (data.get("table") or {}).get("rows") or []
+    out = []
+    for r in rows:
+        sym = str(r.get("symbol", "")).strip().upper()
+        if not re.fullmatch(r"[A-Z][A-Z0-9./\-]{0,9}", sym):
+            continue                                   # preferreds (^), warrants etc.
+        mc, px = _num(r.get("marketCap")), _num(r.get("lastsale"))
+        if mc is None or px is None:
+            continue
+        if lo_usd <= mc <= hi_usd and px >= min_price:
+            out.append({"symbol": sym, "name": str(r.get("name", "")).strip(),
+                        "sector": str(r.get("sector", "")).strip()})
+    return out
+
+
+def fetch_nasdaq_screener(client, tries: int = 2):
+    url = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&offset=0&download=true"
+    hdr = {"Accept": "application/json, text/plain, */*", "Origin": "https://www.nasdaq.com",
+           "Referer": "https://www.nasdaq.com/"}
+    last = "no response"
+    for i in range(tries):
+        try:
+            r = client.get(url, headers=hdr)
+            if r.status_code == 200 and r.content:
+                return r.json()
+            last = f"HTTP {r.status_code}"
+        except Exception as e:
+            last = f"{type(e).__name__}: {e}"
+        time.sleep(2 * (i + 1))
+    raise RuntimeError(f"Nasdaq screener -> {last}")
+
+
+def blackrock_url(ishares_url: str | None) -> str | None:
+    """Same holdings file served from blackrock.com (a second chance if ishares.com refuses)."""
+    if not ishares_url or "ishares.com/us/products/" not in ishares_url:
+        return None
+    return (ishares_url.replace("https://www.ishares.com/us/products/",
+                                "https://www.blackrock.com/us/individual/products/")
+            .replace("1467271812596.ajax", "1464253357814.ajax"))
+
+
+def _snippet(text: str) -> str:
+    return re.sub(r"\s+", " ", (text or "")[:90]).strip()
+
+
 def load_us_constituents(cfg: dict, client, listing: dict | None, refresh: bool = True):
-    """Download each index list (iShares holdings, then Wikipedia); fall back to the saved copy.
-    Each stock is kept only in the largest index it belongs to."""
+    """Each index list from the iShares holdings file (ishares.com, then blackrock.com), then
+    Wikipedia, then — for categories with a market-cap proxy — the Nasdaq screener, and finally
+    the copy saved by the last good run. Each stock is kept only in the largest index it is in.
+    Returns (symbols per category, name lookup, status per category, categories using a proxy)."""
     cdir = ROOT / "data" / "constituents"
     cdir.mkdir(parents=True, exist_ok=True)
     stripped = stripped_index(listing)
-    lists, status = {}, {}
+    lists, status, proxy_keys = {}, {}, set()
+    screener_js, screener_err = None, None
     for key, cat in cfg["categories"].items():
         path = cdir / f"{key.lower()}.csv"
-        rows, how, errs = None, None, []
+        rows, how, errs, is_proxy = None, None, [], False
         if refresh and client is not None:
             sources = [("iShares holdings", cat.get("holdings_url"), "ishares"),
+                       ("BlackRock holdings", blackrock_url(cat.get("holdings_url")), "ishares"),
                        ("Wikipedia", cat.get("wikipedia_url"), "wiki")]
             for label, url, kind in sources:
                 if not url:
                     continue
+                text, r = "", None
                 try:
-                    text = http_get(client, url, tries=2).text
+                    r = http_get(client, url, tries=2)
+                    text = r.text
                     if kind == "ishares":
                         got, as_of = parse_ishares_holdings(text)
                     else:
@@ -466,18 +528,46 @@ def load_us_constituents(cfg: dict, client, listing: dict | None, refresh: bool 
                     rows, how = got, label + (f" as of {as_of}" if as_of else "")
                     break
                 except Exception as e:
-                    errs.append(f"{label}: {str(e)[:120]}")
+                    got_ct = r.headers.get("content-type", "") if r is not None else ""
+                    errs.append(f"{label}: {str(e)[:90]}"
+                                + (f" [got {got_ct}: '{_snippet(text)}']" if text else ""))
+            mc = cat.get("proxy_market_cap_usd_m")
+            if rows is None and mc:
+                try:
+                    if screener_js is None and screener_err is None:
+                        try:
+                            screener_js = fetch_nasdaq_screener(client)
+                        except Exception as e:
+                            screener_err = str(e)[:120]
+                    if screener_js is None:
+                        raise RuntimeError(screener_err)
+                    got = parse_nasdaq_screener(screener_js, mc[0] * 1e6, mc[1] * 1e6, cfg["min_price"])
+                    if len(got) < cat.get("proxy_min_size", 100):
+                        raise ValueError(f"only {len(got)} stocks")
+                    rows, is_proxy = got, True
+                    how = f"PROXY: Nasdaq screener, market cap ${mc[0]}M–${mc[1]}M, price ≥ ${cfg['min_price']}"
+                except Exception as e:
+                    errs.append(f"market-cap proxy: {str(e)[:120]}")
         if rows is not None:
-            for r in rows:
-                r["symbol"] = resolve_symbol(r["symbol"], listing, stripped)
-            pd.DataFrame(rows, columns=["symbol", "name", "sector"]).to_csv(path, index=False)
-            lists[key], status[key] = rows, f"downloaded ({how}, {len(rows)} stocks)"
+            for r_ in rows:
+                r_["symbol"] = resolve_symbol(r_["symbol"], listing, stripped)
+            df = pd.DataFrame(rows, columns=["symbol", "name", "sector"])
+            df["source"] = "proxy" if is_proxy else "index"
+            df.to_csv(path, index=False)
+            lists[key] = rows
+            status[key] = f"downloaded ({how}, {len(rows)} stocks)"
+            if errs:
+                status[key] += f" — earlier sources failed: {'; '.join(errs)}"
         elif path.exists():
             saved = pd.read_csv(path, dtype=str).fillna("")
-            lists[key] = saved.to_dict("records")
-            status[key] = "saved copy" + (f" (download failed: {'; '.join(errs)})" if errs else "")
+            is_proxy = "source" in saved.columns and (saved["source"] == "proxy").any()
+            lists[key] = saved[["symbol", "name", "sector"]].to_dict("records")
+            status[key] = ("saved copy" + (" (PROXY list)" if is_proxy else "")
+                           + (f" (download failed: {'; '.join(errs)})" if errs else ""))
         else:
             lists[key], status[key] = [], f"MISSING (download failed: {'; '.join(errs)})"
+        if is_proxy:
+            proxy_keys.add(key)
     out, taken = {}, set()
     for key in cfg["categories"]:                 # config order = largest index first
         uniq = []
@@ -488,7 +578,7 @@ def load_us_constituents(cfg: dict, client, listing: dict | None, refresh: bool 
                 uniq.append(s)
         out[key] = uniq
     names = {r["symbol"]: r for rows in lists.values() for r in rows}
-    return out, names, status
+    return out, names, status, proxy_keys
 
 
 def _frame_us(data: pd.DataFrame, ticker: str) -> pd.DataFrame | None:
@@ -945,20 +1035,31 @@ def apply_profile(rec: dict, prof: dict | None, cat: dict, cfg: dict, data_date:
 
     # earnings: next date inside the holding window, and whether it already reported
     stamps = prof.get("earnings_stamps") or []
-    upcoming, past = [], []
+    by_date: dict = {}
     for ts in stamps:
         d = ts.date() if hasattr(ts, "date") else ts
         hour = getattr(ts, "hour", 0)
         timing = "BMO" if 0 < hour < 12 else ("AMC" if hour >= 15 else None)
+        by_date.setdefault(d, set())
+        if timing:
+            by_date[d].add(timing)
+    upcoming, past = [], []
+    for d, timings in by_date.items():
+        timing = next(iter(timings)) if len(timings) == 1 else None
         if d > data_date or (d == data_date and timing != "BMO"):
             upcoming.append((d, timing))
         else:
             past.append(d)
     if upcoming:
-        d, timing = min(upcoming, key=lambda x: (x[0], x[1] is None))
+        d, timing = min(upcoming)
         k = trading_days_between(data_date, d)
         rec["next_earnings"] = {"date": str(d), "timing": timing, "trading_days_ahead": k}
-        if k <= cfg["earnings_window_days"]:
+        same_day_unknown = (k == 0 and timing is None)
+        if same_day_unknown:
+            # reported on the scan date at an unknown time: the move may already include it
+            rec["flags"].append(f"⚠ Earnings on {d} (BMO/AMC unknown)")
+            rec["unverified"].append("earnings timing (BMO = already reported, AMC = reaction next session)")
+        elif k <= cfg["earnings_window_days"]:
             rec["flags"].append(f"⚠ Earnings on {d}{' ' + timing if timing else ''}")
             if k <= 5:
                 rec["qty"] = floor_qty(rec["qty"] / 2, cfg.get("fractional_shares", True))
@@ -970,8 +1071,8 @@ def apply_profile(rec: dict, prof: dict | None, cat: dict, cfg: dict, data_date:
                     rec.update(passed=False, failed_step=STEPS[PROFILE_STEP],
                                fail_detail="quantity 0 after halving for earnings")
                     return rec
-    else:
-        rec["unverified"].append("earnings date")
+    elif not (past and (data_date - max(past)).days <= 75):
+        rec["unverified"].append("earnings date")       # no upcoming date and no recent report
     if past and (data_date - max(past)).days <= 45:
         rec["last_earnings"] = str(max(past))
         score += 0.5; why.append("already reported")
@@ -1031,7 +1132,7 @@ def market_snapshot(mk: dict, breadth: dict) -> dict:
 # --------------------------------------------------------------------------
 def run(cfg: dict, constituents: dict, prices: dict, mk: dict, listing: dict | None,
         regsho: set | None, checks: dict, today: dt.date, profile_fn=None,
-        names: dict | None = None) -> dict:
+        names: dict | None = None, proxy_categories: set | None = None) -> dict:
     spy = mk[SPY]
     data_date = spy.index[-1].date()
     inr = mk.get("INR=X")
@@ -1110,12 +1211,17 @@ def run(cfg: dict, constituents: dict, prices: dict, mk: dict, listing: dict | N
             miss = max(recs, key=lambda r: (r["steps_passed"], r.get("rs_3m_pct") or -999))
             closest = {"symbol": miss["symbol"], "failed_step": miss.get("failed_step"),
                        "detail": miss.get("fail_detail"), "steps_passed": miss["steps_passed"]}
+        tgt = [r.get("fail_detail", "") for r in recs if r.get("failed_step") == "target & R:R after costs"]
         categories[key] = {
             "label": cat["label"], "universe_size": len(syms),
+            "membership_proxy": key in (proxy_categories or set()),
+            "universe_source": (checks.get("constituents") or {}).get(key),
             "passed_all_hard_filters": n_passed,
             "profile_checked": checked,
             "candidates": [clean_record(r) for r in passed[:cfg["candidates_per_category"]]],
             "closest_miss": closest, "funnel": funnel,
+            "target_step_failures": {"resistance too close": sum(1 for t in tgt if t.startswith("target only")),
+                                     "R:R after costs < min": sum(1 for t in tgt if t.startswith("R:R"))},
         }
 
     breadth = {"sp500_pct_above_50ema": None, "sp500_pct_above_200ema": None,
@@ -1171,7 +1277,12 @@ def to_markdown(rep: dict) -> str:
         else:
             cm = c["closest_miss"] or {}
             L.append(f"NO TRADE — closest: {cm.get('symbol')} (failed: {cm.get('failed_step')} — {cm.get('detail')})")
+        if c.get("membership_proxy"):
+            L.append("_Universe is a market-cap PROXY, not index membership._")
         L.append("Funnel: " + " → ".join(f"{f['step']} {f['remaining']}" for f in c["funnel"]))
+        tf = c.get("target_step_failures") or {}
+        if any(tf.values()):
+            L.append("Target step failures: " + ", ".join(f"{k} {v}" for k, v in tf.items()))
         L.append("")
     return "\n".join(L)
 
@@ -1214,7 +1325,7 @@ def main(argv=None) -> int:
         log("exchange symbol directory (Nasdaq Trader)")
         listing, checks["listing"] = load_listing(client)
         log("index constituents (iShares holdings)")
-        constituents, names, checks["constituents"] = load_us_constituents(
+        constituents, names, checks["constituents"], proxy_keys = load_us_constituents(
             cfg, client, listing, not args.no_refresh_lists)
         all_syms = sorted({s for v in constituents.values() for s in v})
         if not all_syms:
@@ -1244,7 +1355,7 @@ def main(argv=None) -> int:
             log("Nasdaq Reg SHO threshold list")
             regsho, checks["regsho"] = fetch_regsho(client, data_date)
         rep = run(cfg, constituents, prices, mk, listing, regsho, checks, today,
-                  profile_fn=fetch_profile, names=names)
+                  profile_fn=fetch_profile, names=names, proxy_categories=proxy_keys)
         write_outputs(rep, args.out)
         log(f"done: {rep['status']} — {rep.get('message')}")
         return 0

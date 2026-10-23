@@ -63,7 +63,9 @@ categories:
   MICRO:
     label: Microcap
     holdings_url: https://www.ishares.com/us/products/239716/ishares-microcap-etf/1467271812596.ajax?fileType=csv&fileName=IWC_holdings&dataType=fund
-    wikipedia_url: null    # no public list; falls back to the copy saved in data/us_constituents/
+    wikipedia_url: null    # no public list of Russell Microcap members
+    proxy_market_cap_usd_m: [50, 300]   # if the IWC list can't be downloaded: all US stocks in this
+    proxy_min_size: 100                 # market-cap range (Nasdaq screener), marked as a PROXY
     min_size: 500
     category_etf: IWC
     min_adv_usd_m: 1
