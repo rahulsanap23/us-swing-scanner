@@ -1,13 +1,13 @@
-# US swing scan — 2026-10-22
+# US swing scan — 2026-10-23
 Status: **ok** — scan complete  
-Generated 2026-10-23 14:16 ET / 2026-10-23 23:46 IST
+Generated 2026-10-23 18:48 ET / 2026-10-24 04:18 IST
 
-Capital $2120.61 (₹200,000 ÷ 94.31), risk $21.21 per trade, max position $530.15
+Capital $2106.82 (₹200,000 ÷ 94.93), risk $21.07 per trade, max position $526.7
 
 ## Data checks
 ```
 {
-  "session_scanned": "2026-10-22",
+  "session_scanned": "2026-10-23",
   "listing": {
     "nasdaqlisted": "ok (5625 symbols)",
     "otherlisted": "ok (7674 symbols)"
@@ -27,53 +27,51 @@ Capital $2120.61 (₹200,000 ÷ 94.31), risk $21.21 per trade, max position $530
     ]
   },
   "market_tickers_missing": [],
-  "regsho": "ok (file 2026-10-22)"
+  "regsho": "ok (file 2026-10-23)"
 }
 ```
 
 ## Market
-- SPY 763.96 | 20/50/200 EMA 769.76 / 766.07 / 731.02 | 5d -1.01% | 21d -0.5% | HH/HL True
-- QQQ 704.47 | 20/50/200 EMA 729.5 / 726.21 / 683.62 | 5d -3.23% | 21d -4.96% | HH/HL True
-- IWM 276.67 | 20/50/200 EMA 277.92 / 283.54 / 276.64 | 5d 0.58% | 21d -1.86% | HH/HL False
-- VIX 19.03 (15.61% 5d), VIX3M 20.12, contango (calm)
-- Breadth: S&P 500 above 50 EMA 64.4%, above 200 EMA 61.2%
-- Sectors 1M: XLP 9.17%, XLE 8.34%, XLU 7.85%, XLV 7.41%, XLY 3.94%, XLF 3.87%, KRE 2.88%, XLB 2.8%, XHB 2.17%, XLRE 1.63%, IGV 0.57%, XLI -1.98%, XBI -2.29%, ITA -4.41%, XLC -4.57%, XLK -6.66%, SMH -12.98%
+- SPY 759.97 | 20/50/200 EMA 768.83 / 765.83 / 731.32 | 5d -0.43% | 21d -0.94% | HH/HL True
+- QQQ 704.4 | 20/50/200 EMA 727.11 / 725.36 / 683.85 | 5d -0.76% | 21d -4.95% | HH/HL True
+- IWM 275.75 | 20/50/200 EMA 277.72 / 283.24 / 276.63 | 5d 1.96% | 21d -2.1% | HH/HL False
+- VIX 19.45 (-2.7% 5d), VIX3M 20.48, contango (calm)
+- Breadth: S&P 500 above 50 EMA 60.4%, above 200 EMA 57.0%
+- Sectors 1M: XLE 10.75%, XLU 8.13%, XLP 8.03%, XLV 5.54%, XLB 3.28%, IGV 3.21%, XLY 2.52%, XLF 2.51%, XLRE 2.21%, KRE 2.14%, XHB 1.63%, XLI -2.49%, XBI -4.17%, ITA -4.95%, XLK -5.9%, XLC -7.44%, SMH -12.21%
 
-## S&P 500 — 6 of 503 passed all filters; top 6 profile-checked, 5 shown
+## S&P 500 — 9 of 503 passed all filters; top 8 profile-checked, 5 shown
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| KDP | 52-week high breakout | 35.19 | LMT 35.19 | 34.06 | 38.38 | 15.06 | 2.5 | 7.42 | ⚠ Earnings on 2026-11-03 BMO |
-| NDAQ | 52-week high breakout | 103.3 | LMT 103.3 | 99.77 | 113.21 | 5.13 | 2.5 | 7.41 |  |
-| ELV | Inside bar near resistance | 445.28 | BS 450.85 | 433.1 | 495.94 | 1.17 | 2.29 | 5.0 |  |
-| AAPL | Pullback to 20 EMA | 348.22 | LMT 348.22 | 338.06 | 377.28 | 1.52 | 2.5 | 5.0 | ⚠ Earnings on 2026-11-02 AMC |
-| XOM | Bull flag / tight consolidation | 178.23 | BS 180.62 | 174.25 | 198.44 | 2.93 | 2.5 | 4.0 | ⚠ Earnings on 2026-10-30 BMO |
-Funnel: universe 503 → enough price history 500 → price floor 500 → listing checks 499 → no reverse split / wild gaps 496 → liquidity 493 → primary uptrend (50 EMA, 200) 209 → 20 EMA 200 → 3M relative strength vs SPY > 0 142 → RSI 40-75 109 → named setup 45 → not overextended 44 → ATR band 35 → stop within limit 32 → target & R:R after costs 6 → position size 6 → short interest / fund type 6
-Target step failures: resistance too close 21, R:R after costs < min 5
+| ZBRA | Bull flag / tight consolidation | 386.45 | BS 393.57 | 377.31 | 432.93 | 1.29 | 2.19 | 4.5 | ⚠ Earnings on 2026-11-03 BMO |
+| BDX | Inside bar near resistance | 198.91 | BS 200.8 | 194.64 | 218.31 | 2.62 | 2.5 | 4.5 | ⚠ Earnings on 2026-11-05 BMO |
+| KDP | Bull flag / tight consolidation | 34.68 | BS 35.47 | 34.06 | 39.02 | 14.84 | 2.27 | 4.0 | ⚠ Earnings on 2026-11-03 BMO |
+| BIIB | Inside bar near resistance | 250.69 | BS 252.94 | 242.48 | 278.23 | 1.0 | 2.19 | 3.5 | ⚠ Earnings on 2026-10-28 BMO |
+| EMR | Bull flag / tight consolidation | 161.59 | BS 165.34 | 158.7 | 181.87 | 3.17 | 2.25 | 3.5 | ⚠ Earnings on 2026-11-04 BMO |
+Funnel: universe 503 → enough price history 500 → price floor 500 → listing checks 499 → no reverse split / wild gaps 496 → liquidity 493 → primary uptrend (50 EMA, 200) 203 → 20 EMA 197 → 3M relative strength vs SPY > 0 137 → RSI 40-75 121 → named setup 56 → not overextended 53 → ATR band 36 → stop within limit 33 → target & R:R after costs 9 → position size 9 → short interest / fund type 9
+Target step failures: resistance too close 19, R:R after costs < min 5
 
 ## MidCap 400 — 3 of 400 passed all filters; top 3 profile-checked, 3 shown
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| EQH | Pullback to 20 EMA | 55.04 | LMT 55.04 | 52.84 | 60.54 | 9.63 | 2.26 | 4.5 | ⚠ Earnings on 2026-11-02 AMC |
-| CRBG | Pullback to 20 EMA | 35.59 | LMT 35.59 | 34.13 | 39.15 | 14.52 | 2.2 | 4.5 | ⚠ Earnings on 2026-11-02 AMC |
-| AMG | Pullback to 20 EMA | 395.53 | LMT 395.53 | 379.19 | 435.08 | 1.29 | 2.19 | 4.5 | ⚠ Earnings on 2026-11-02 BMO |
-Funnel: universe 400 → enough price history 400 → price floor 400 → listing checks 398 → no reverse split / wild gaps 398 → liquidity 398 → primary uptrend (50 EMA, 200) 142 → 20 EMA 135 → 3M relative strength vs SPY > 0 98 → RSI 40-75 86 → named setup 34 → not overextended 32 → ATR band 27 → stop within limit 19 → target & R:R after costs 3 → position size 3 → short interest / fund type 3
+| MORN | Inside bar near resistance | 224.89 | BS 225.74 | 216.18 | 248.31 | 1.1 | 2.14 | 4.0 | ⚠ Earnings on 2026-10-28 AMC |
+| BJ | Bull flag / tight consolidation | 105.84 | BS 106.87 | 102.62 | 117.56 | 4.92 | 2.27 | 4.0 |  |
+| THG | Inside bar near resistance | 237.73 | BS 240.2 | 233.56 | 259.32 | 1.09 | 2.5 | 3.0 | ⚠ Earnings on 2026-10-28 AMC |
+Funnel: universe 400 → enough price history 400 → price floor 400 → listing checks 398 → no reverse split / wild gaps 398 → liquidity 398 → primary uptrend (50 EMA, 200) 137 → 20 EMA 129 → 3M relative strength vs SPY > 0 84 → RSI 40-75 77 → named setup 35 → not overextended 29 → ATR band 27 → stop within limit 19 → target & R:R after costs 3 → position size 3 → short interest / fund type 3
 Target step failures: resistance too close 12, R:R after costs < min 4
 
-## SmallCap 600 — 5 of 600 passed all filters; top 6 profile-checked, 5 shown
+## SmallCap 600 — 7 of 600 passed all filters; top 8 profile-checked, 5 shown
 | Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
 |---|---|---|---|---|---|---|---|---|---|
-| UCB | 52-week high breakout | 37.23 | LMT 37.23 | 36.07 | 40.52 | 14.23 | 2.5 | 7.21 |  |
-| MD | 52-week high breakout | 29.55 | LMT 29.55 | 28.32 | 32.51 | 8.61 | 2.18 | 5.62 | ⚠ Earnings on 2026-10-29 BMO |
-| ICUI | Pullback to 20 EMA | 168.33 | LMT 168.33 | 161.5 | 185.16 | 3.1 | 2.23 | 4.5 | ⚠ Earnings on 2026-11-05 AMC |
-| URBN | Bull flag / tight consolidation | 88.29 | BS 90.77 | 86.89 | 99.85 | 5.46 | 2.12 | 4.0 |  |
-| MMSI | Pullback to 20 EMA | 93.94 | LMT 93.94 | 90.4 | 103.33 | 2.82 | 2.38 | 3.5 | ⚠ Earnings on 2026-10-29 AMC |
-Funnel: universe 600 → enough price history 590 → price floor 576 → listing checks 574 → no reverse split / wild gaps 573 → liquidity 567 → primary uptrend (50 EMA, 200) 218 → 20 EMA 208 → 3M relative strength vs SPY > 0 126 → RSI 40-75 103 → named setup 50 → not overextended 47 → ATR band 43 → stop within limit 20 → target & R:R after costs 6 → position size 6 → short interest / fund type 5
-Target step failures: resistance too close 13, R:R after costs < min 1
+| CON | Inside bar near resistance | 39.25 | BS 40.03 | 38.6 | 44.03 | 13.15 | 2.5 | 5.0 | ⚠ Earnings on 2026-11-05 AMC |
+| LQDT | Pullback to 20 EMA | 44.85 | LMT 44.85 | 42.9 | 49.34 | 10.8 | 2.09 | 5.0 |  |
+| ADUS | Inside bar near resistance | 121.81 | BS 123.26 | 119.02 | 135.15 | 4.27 | 2.5 | 5.0 | ⚠ Earnings on 2026-11-03 AMC |
+| ICUI | Bull flag / tight consolidation | 166.62 | BS 168.96 | 161.82 | 185.86 | 2.95 | 2.14 | 4.5 | ⚠ Earnings on 2026-11-05 AMC |
+| MMSI | Inside bar near resistance | 93.3 | BS 94.06 | 90.65 | 103.47 | 2.79 | 2.47 | 4.0 | ⚠ Earnings on 2026-10-29 AMC |
+Funnel: universe 600 → enough price history 589 → price floor 576 → listing checks 574 → no reverse split / wild gaps 573 → liquidity 567 → primary uptrend (50 EMA, 200) 223 → 20 EMA 215 → 3M relative strength vs SPY > 0 130 → RSI 40-75 110 → named setup 67 → not overextended 63 → ATR band 59 → stop within limit 32 → target & R:R after costs 8 → position size 8 → short interest / fund type 7
+Target step failures: resistance too close 16, R:R after costs < min 8
 
-## Microcap — 1 of 445 passed all filters; top 1 profile-checked, 1 shown
-| Ticker | Setup | Last | Entry | Stop | Target | Qty | R:R net | Score | Flags |
-|---|---|---|---|---|---|---|---|---|---|
-| FF | NR7 near resistance | 5.52 | BS 5.61 | 5.4 | 6.17 | 94.5 | 2.39 | 4.0 |  |
+## Microcap — 0 of 445 passed all filters; top 0 profile-checked, 0 shown
+NO TRADE — closest: III (failed: target & R:R after costs — target only 3.4% away (resistance too close))
 _Universe is a market-cap PROXY, not index membership._
-Funnel: universe 445 → enough price history 417 → price floor 417 → listing checks 399 → no reverse split / wild gaps 363 → liquidity 120 → primary uptrend (50 EMA, 200) 26 → 20 EMA 24 → 3M relative strength vs SPY > 0 22 → RSI 40-75 19 → named setup 8 → not overextended 7 → ATR band 6 → stop within limit 4 → target & R:R after costs 1 → position size 1 → short interest / fund type 1
-Target step failures: resistance too close 3, R:R after costs < min 0
+Funnel: universe 445 → enough price history 408 → price floor 406 → listing checks 392 → no reverse split / wild gaps 358 → liquidity 120 → primary uptrend (50 EMA, 200) 26 → 20 EMA 24 → 3M relative strength vs SPY > 0 22 → RSI 40-75 20 → named setup 10 → not overextended 9 → ATR band 7 → stop within limit 3 → target & R:R after costs 0 → position size 0 → short interest / fund type 0
+Target step failures: resistance too close 2, R:R after costs < min 1
