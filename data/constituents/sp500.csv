@@ -378,14 +378,13 @@ PEG,Public Service Enterprise Group,Utilities,index
 PTC,PTC Inc.,Information Technology,index
 PSA,Public Storage,Real Estate,index
 PHM,PulteGroup,Consumer Discretionary,index
-PWR,Quanta Services,Industrials,index
-QCOM,Qualcomm,Information Technology,index
-DGX,Quest Diagnostics,Health Care,index
 Q,Qnity Electronics,Information Technology,index
+QCOM,Qualcomm,Information Technology,index
+PWR,Quanta Services,Industrials,index
+DGX,Quest Diagnostics,Health Care,index
 RL,Ralph Lauren Corporation,Consumer Discretionary,index
 RJF,Raymond James Financial,Financials,index
 RDDT,Reddit,Communication Services,index
-RTX,RTX Corporation,Industrials,index
 O,Realty Income,Real Estate,index
 REG,Regency Centers,Real Estate,index
 REGN,Regeneron Pharmaceuticals,Health Care,index
@@ -399,6 +398,7 @@ ROL,"Rollins, Inc.",Industrials,index
 ROP,Roper Technologies,Information Technology,index
 ROST,Ross Stores,Consumer Discretionary,index
 RCL,Royal Caribbean Group,Consumer Discretionary,index
+RTX,RTX Corporation,Industrials,index
 SPGI,S&P Global,Financials,index
 CRM,Salesforce,Information Technology,index
 SNDK,Sandisk,Information Technology,index
@@ -409,7 +409,7 @@ SRE,Sempra,Utilities,index
 NOW,ServiceNow,Information Technology,index
 SHW,Sherwin-Williams,Materials,index
 SPG,Simon Property Group,Real Estate,index
-SKYD,Skydance Corporation,Communication Services,index
+SKYD,Skydance,Communication Services,index
 SWKS,Skyworks Solutions,Information Technology,index
 SJM,J.M. Smucker Company (The),Consumer Staples,index
 SW,Smurfit Westrock,Materials,index

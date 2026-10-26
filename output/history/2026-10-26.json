@@ -1,0 +1,1635 @@
+{
+  "schema_version": 1,
+  "market_region": "US",
+  "generated_at_ist": "2026-10-27 04:22",
+  "generated_at_et": "2026-10-26 18:52",
+  "run_date": "2026-10-26",
+  "data_date": "2026-10-26",
+  "settings": {
+    "capital_usd": 2101.39,
+    "usd_inr": 95.18,
+    "usd_inr_source": "Yahoo INR=X",
+    "capital_basis": "₹200,000 ÷ 95.18",
+    "risk_usd": 21.01,
+    "max_position_usd": 525.35,
+    "risk_pct": 1.0,
+    "max_position_pct": 25,
+    "fractional_shares": true,
+    "round_trip_cost_pct": 0.3,
+    "max_stop_pct": 5,
+    "max_target_pct": 10,
+    "min_rr": 2.0
+  },
+  "data_checks": {
+    "session_scanned": "2026-10-26",
+    "listing": {
+      "nasdaqlisted": "ok (5625 symbols)",
+      "otherlisted": "ok (7673 symbols)"
+    },
+    "constituents": {
+      "SP500": "downloaded (Wikipedia, 503 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "SP400": "downloaded (Wikipedia, 400 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "SP600": "downloaded (Wikipedia, 603 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "MICRO": "downloaded (PROXY: Nasdaq screener, market cap $50M–$300M, price ≥ $5, 451 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']"
+    },
+    "prices": {
+      "source": "Yahoo Finance (yfinance)",
+      "requested": 1954,
+      "received": 1953,
+      "missing": [
+        "CWEN-A"
+      ]
+    },
+    "market_tickers_missing": [],
+    "regsho": "ok (file 2026-10-26)"
+  },
+  "status": "ok",
+  "message": "scan complete",
+  "market": {
+    "indexes": {
+      "SPY": {
+        "close": 765.37,
+        "ema20": 768.5,
+        "ema50": 765.81,
+        "ema200": 731.67,
+        "above": {
+          "ema20": false,
+          "ema50": false,
+          "ema200": true
+        },
+        "ret_5d_pct": -0.14,
+        "ret_21d_pct": -0.78,
+        "rsi": 47.32,
+        "higher_highs_and_lows_20d": true
+      },
+      "QQQ": {
+        "close": 712.2,
+        "ema20": 725.69,
+        "ema50": 724.84,
+        "ema200": 684.16,
+        "above": {
+          "ema20": false,
+          "ema50": false,
+          "ema200": true
+        },
+        "ret_5d_pct": -0.86,
+        "ret_21d_pct": -4.34,
+        "rsi": 41.73,
+        "higher_highs_and_lows_20d": true
+      },
+      "IWM": {
+        "close": 276.99,
+        "ema20": 277.65,
+        "ema50": 282.99,
+        "ema200": 276.66,
+        "above": {
+          "ema20": false,
+          "ema50": false,
+          "ema200": true
+        },
+        "ret_5d_pct": 2.1,
+        "ret_21d_pct": -1.77,
+        "rsi": 45.67,
+        "higher_highs_and_lows_20d": false
+      }
+    },
+    "breadth": {
+      "sp500_pct_above_50ema": 61.2,
+      "sp500_pct_above_200ema": 60.6,
+      "universe_pct_above_50ema": 48.92
+    },
+    "vix": {
+      "level": 18.39,
+      "change_5d_pct": -0.27,
+      "vix3m": 19.94,
+      "term_structure": "contango (calm)"
+    },
+    "sectors_by_1m": [
+      {
+        "etf": "XLE",
+        "name": "Energy",
+        "ret_5d_pct": 2.71,
+        "ret_21d_pct": 12.25
+      },
+      {
+        "etf": "XLU",
+        "name": "Utilities",
+        "ret_5d_pct": 2.88,
+        "ret_21d_pct": 7.69
+      },
+      {
+        "etf": "XLP",
+        "name": "Consumer Staples",
+        "ret_5d_pct": 0.86,
+        "ret_21d_pct": 7.19
+      },
+      {
+        "etf": "IGV",
+        "name": "Software",
+        "ret_5d_pct": 5.09,
+        "ret_21d_pct": 5.07
+      },
+      {
+        "etf": "XLV",
+        "name": "Health Care",
+        "ret_5d_pct": 2.07,
+        "ret_21d_pct": 5.03
+      },
+      {
+        "etf": "XLY",
+        "name": "Consumer Discretionary",
+        "ret_5d_pct": -0.17,
+        "ret_21d_pct": 3.35
+      },
+      {
+        "etf": "XLB",
+        "name": "Materials",
+        "ret_5d_pct": 0.84,
+        "ret_21d_pct": 3.17
+      },
+      {
+        "etf": "XLRE",
+        "name": "Real Estate",
+        "ret_5d_pct": 2.71,
+        "ret_21d_pct": 2.98
+      },
+      {
+        "etf": "XLF",
+        "name": "Financials",
+        "ret_5d_pct": 1.74,
+        "ret_21d_pct": 2.15
+      },
+      {
+        "etf": "KRE",
+        "name": "Regional Banks",
+        "ret_5d_pct": 5.01,
+        "ret_21d_pct": 1.65
+      },
+      {
+        "etf": "XHB",
+        "name": "Homebuilders",
+        "ret_5d_pct": 4.06,
+        "ret_21d_pct": -0.38
+      },
+      {
+        "etf": "XLI",
+        "name": "Industrials",
+        "ret_5d_pct": 0.17,
+        "ret_21d_pct": -2.04
+      },
+      {
+        "etf": "XBI",
+        "name": "Biotech",
+        "ret_5d_pct": 1.77,
+        "ret_21d_pct": -2.94
+      },
+      {
+        "etf": "ITA",
+        "name": "Aerospace & Defense",
+        "ret_5d_pct": -0.29,
+        "ret_21d_pct": -3.11
+      },
+      {
+        "etf": "XLK",
+        "name": "Technology",
+        "ret_5d_pct": 0.19,
+        "ret_21d_pct": -5.07
+      },
+      {
+        "etf": "XLC",
+        "name": "Communication Services",
+        "ret_5d_pct": -5.67,
+        "ret_21d_pct": -8.06
+      },
+      {
+        "etf": "SMH",
+        "name": "Semiconductors",
+        "ret_5d_pct": -1.25,
+        "ret_21d_pct": -10.71
+      }
+    ],
+    "macro": {
+      "US 10-year yield %": {
+        "last": 4.99,
+        "change_5d_pct": -2.92
+      },
+      "US Dollar Index": {
+        "last": 102.03,
+        "change_5d_pct": 0.05
+      },
+      "WTI crude $": {
+        "last": 101.4,
+        "change_5d_pct": -2.18
+      },
+      "Gold $": {
+        "last": 4026.3,
+        "change_5d_pct": -3.22
+      },
+      "USD-INR": {
+        "last": 95.18,
+        "change_5d_pct": 0.21
+      }
+    }
+  },
+  "categories": {
+    "SP500": {
+      "label": "S&P 500",
+      "universe_size": 503,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 503 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "passed_all_hard_filters": 7,
+      "profile_checked": 7,
+      "candidates": [
+        {
+          "symbol": "FAST",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [],
+          "unverified": [],
+          "last_close": 52.47,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 434.15,
+          "avg_volume_shares": 8488400.7,
+          "volume_ratio": 0.59,
+          "rs_1m_pct": 4.86,
+          "rs_3m_pct": 5.59,
+          "rsi": 60.33,
+          "setup": "Pullback to 20 EMA",
+          "setup_family": "pullback",
+          "other_setups": [
+            "Inside bar near resistance",
+            "NR7 near resistance"
+          ],
+          "pct_above_ema20": 2.32,
+          "ret_5d_pct": 2.84,
+          "atr_pct": 2.46,
+          "entry": 52.47,
+          "stop": 50.82,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 3.14,
+          "entry_type": "LMT",
+          "entry_note": "limit at last close",
+          "target": 57.15,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 8.92,
+          "rr": 2.84,
+          "rr_after_costs": 2.5,
+          "nearest_resistance": null,
+          "qty": 10.01,
+          "position_value": 525.22,
+          "risk_amount": 16.52,
+          "score": 5.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD>0",
+            "R:R 2.5",
+            "stop under swing low",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%",
+            "already reported"
+          ],
+          "adx": 12.12,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Fastenal Company",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Industrials",
+            "industry": "Industrial Distribution",
+            "market_cap": 60198912000,
+            "float_shares": 1144639749,
+            "inst_pct": 87.57,
+            "short_pct_float": 3.44,
+            "days_to_cover": 4.95,
+            "ttm_eps": 1.23,
+            "net_debt_to_ebitda": 0.12
+          },
+          "last_earnings": "2026-10-14",
+          "name": "Fastenal Company"
+        },
+        {
+          "symbol": "A",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [],
+          "unverified": [],
+          "last_close": 175.96,
+          "exchange": "NYSE",
+          "adv_usd_m": 370.24,
+          "avg_volume_shares": 2154995.65,
+          "volume_ratio": 0.78,
+          "rs_1m_pct": 2.63,
+          "rs_3m_pct": 21.19,
+          "rsi": 60.88,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [
+            "Pullback to 20 EMA",
+            "NR7 near resistance"
+          ],
+          "pct_above_ema20": 2.85,
+          "ret_5d_pct": 3.57,
+          "atr_pct": 2.8,
+          "entry": 179.46,
+          "stop": 172.07,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.12,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 197.41,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.0,
+          "rr": 2.43,
+          "rr_after_costs": 2.2,
+          "nearest_resistance": null,
+          "qty": 2.84,
+          "position_value": 509.67,
+          "risk_amount": 20.99,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 36.37,
+          "macd_above_signal": false,
+          "profile": {
+            "name": "Agilent Technologies, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Healthcare",
+            "industry": "Diagnostics & Research",
+            "market_cap": 49608204288,
+            "float_shares": 281226851,
+            "inst_pct": 95.54,
+            "short_pct_float": 2.11,
+            "days_to_cover": 2.09,
+            "ttm_eps": 5.07,
+            "net_debt_to_ebitda": 1.15
+          },
+          "next_earnings": {
+            "date": "2026-11-25",
+            "timing": "AMC",
+            "trading_days_ahead": 22
+          },
+          "name": "Agilent Technologies, Inc."
+        },
+        {
+          "symbol": "AMGN",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-03 AMC"
+          ],
+          "unverified": [],
+          "last_close": 444.63,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 1146.44,
+          "avg_volume_shares": 2711372.65,
+          "volume_ratio": 0.74,
+          "rs_1m_pct": 8.08,
+          "rs_3m_pct": 9.49,
+          "rsi": 63.14,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 4.35,
+          "ret_5d_pct": 4.63,
+          "atr_pct": 2.38,
+          "entry": 451.88,
+          "stop": 436.01,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.51,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 496.3,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 9.83,
+          "rr": 2.8,
+          "rr_after_costs": 2.5,
+          "nearest_resistance": null,
+          "qty": 1.16,
+          "position_value": 524.18,
+          "risk_amount": 18.41,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "R:R 2.5",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 27.8,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Amgen Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "market_cap": 240381214720,
+            "float_shares": 539156080,
+            "inst_pct": 85.18,
+            "short_pct_float": 2.6,
+            "days_to_cover": 4.45,
+            "ttm_eps": 16.1,
+            "net_debt_to_ebitda": 2.51
+          },
+          "next_earnings": {
+            "date": "2026-11-03",
+            "timing": "AMC",
+            "trading_days_ahead": 6
+          },
+          "name": "Amgen Inc."
+        },
+        {
+          "symbol": "ABNB",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-05 AMC"
+          ],
+          "unverified": [],
+          "last_close": 171.05,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 581.68,
+          "avg_volume_shares": 3484617.7,
+          "volume_ratio": 0.58,
+          "rs_1m_pct": 9.47,
+          "rs_3m_pct": 8.14,
+          "rsi": 53.32,
+          "setup": "Pullback to 20 EMA",
+          "setup_family": "pullback",
+          "other_setups": [
+            "NR7 near resistance"
+          ],
+          "pct_above_ema20": 0.92,
+          "ret_5d_pct": -2.51,
+          "atr_pct": 2.66,
+          "entry": 171.05,
+          "stop": 166.5,
+          "stop_basis": "1× ATR",
+          "risk_pct": 2.66,
+          "entry_type": "LMT",
+          "entry_note": "limit at last close",
+          "target": 186.18,
+          "target_basis": "just below resistance 187.12",
+          "target_pct": 8.85,
+          "rr": 3.33,
+          "rr_after_costs": 2.89,
+          "nearest_resistance": 187.12,
+          "qty": 3.07,
+          "position_value": 525.12,
+          "risk_amount": 13.97,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "MACD>0",
+            "trend ADX≥20",
+            "R:R 2.9",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 21.77,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Airbnb, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Consumer Cyclical",
+            "industry": "Travel Services",
+            "market_cap": 102422290432,
+            "float_shares": 405770554,
+            "inst_pct": 89.96,
+            "short_pct_float": 3.66,
+            "days_to_cover": 2.97,
+            "ttm_eps": 4.39,
+            "net_debt_to_ebitda": -3.47
+          },
+          "next_earnings": {
+            "date": "2026-11-05",
+            "timing": "AMC",
+            "trading_days_ahead": 8
+          },
+          "name": "Airbnb, Inc."
+        },
+        {
+          "symbol": "KDP",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-03 BMO"
+          ],
+          "unverified": [],
+          "last_close": 34.99,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 430.25,
+          "avg_volume_shares": 13047835.75,
+          "volume_ratio": 0.84,
+          "rs_1m_pct": 10.37,
+          "rs_3m_pct": 8.98,
+          "rsi": 66.98,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 5.01,
+          "ret_5d_pct": 1.54,
+          "atr_pct": 2.24,
+          "entry": 35.47,
+          "stop": 34.17,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 3.67,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 39.02,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.01,
+          "rr": 2.73,
+          "rr_after_costs": 2.45,
+          "nearest_resistance": null,
+          "qty": 14.81,
+          "position_value": 525.31,
+          "risk_amount": 19.25,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "MACD near/above 0",
+            "stop under swing low",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 30.14,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Keurig Dr Pepper Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "market_cap": 47615303680,
+            "float_shares": 1354389331,
+            "inst_pct": 109.74,
+            "short_pct_float": 6.03,
+            "days_to_cover": 7.15,
+            "ttm_eps": 0.99,
+            "net_debt_to_ebitda": 6.66
+          },
+          "next_earnings": {
+            "date": "2026-11-03",
+            "timing": "BMO",
+            "trading_days_ahead": 6
+          },
+          "name": "Keurig Dr Pepper Inc."
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 503
+        },
+        {
+          "step": "enough price history",
+          "remaining": 500
+        },
+        {
+          "step": "price floor",
+          "remaining": 500
+        },
+        {
+          "step": "listing checks",
+          "remaining": 499
+        },
+        {
+          "step": "no reverse split / wild gaps",
+          "remaining": 496
+        },
+        {
+          "step": "liquidity",
+          "remaining": 493
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 206
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 200
+        },
+        {
+          "step": "3M relative strength vs SPY > 0",
+          "remaining": 120
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 106
+        },
+        {
+          "step": "named setup",
+          "remaining": 51
+        },
+        {
+          "step": "not overextended",
+          "remaining": 49
+        },
+        {
+          "step": "ATR band",
+          "remaining": 31
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 29
+        },
+        {
+          "step": "target & R:R after costs",
+          "remaining": 7
+        },
+        {
+          "step": "position size",
+          "remaining": 7
+        },
+        {
+          "step": "short interest / fund type",
+          "remaining": 7
+        }
+      ],
+      "target_step_failures": {
+        "resistance too close": 17,
+        "R:R after costs < min": 5
+      }
+    },
+    "SP400": {
+      "label": "MidCap 400",
+      "universe_size": 400,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 400 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "passed_all_hard_filters": 4,
+      "profile_checked": 4,
+      "candidates": [
+        {
+          "symbol": "RGA",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-05 AMC"
+          ],
+          "unverified": [],
+          "last_close": 265.15,
+          "exchange": "NYSE",
+          "adv_usd_m": 116.78,
+          "avg_volume_shares": 451726.35,
+          "volume_ratio": 0.85,
+          "rs_1m_pct": 7.47,
+          "rs_3m_pct": 5.78,
+          "rsi": 61.28,
+          "setup": "Inside bar near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 1.81,
+          "ret_5d_pct": -0.62,
+          "atr_pct": 1.93,
+          "entry": 269.76,
+          "stop": 262.26,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 2.78,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 291.34,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 8.0,
+          "rr": 2.88,
+          "rr_after_costs": 2.5,
+          "nearest_resistance": null,
+          "qty": 1.94,
+          "position_value": 523.33,
+          "risk_amount": 14.55,
+          "rs_1m_vs_category_pct": 6.75,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "beats IJH 1M",
+            "MACD near/above 0",
+            "stop under swing low",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 28.99,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Reinsurance Group of America, Incorporated",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Financial Services",
+            "industry": "Insurance - Reinsurance",
+            "market_cap": 17314736128,
+            "float_shares": 64944465,
+            "inst_pct": 103.71,
+            "short_pct_float": 1.64,
+            "days_to_cover": 2.77,
+            "ttm_eps": 22.71,
+            "net_debt_to_ebitda": 0.02
+          },
+          "next_earnings": {
+            "date": "2026-11-05",
+            "timing": "AMC",
+            "trading_days_ahead": 8
+          },
+          "name": "Reinsurance Group of America, Incorporated"
+        },
+        {
+          "symbol": "MORN",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-10-28 AMC"
+          ],
+          "unverified": [],
+          "last_close": 225.29,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 50.73,
+          "avg_volume_shares": 248666.65,
+          "volume_ratio": 1.23,
+          "rs_1m_pct": 15.85,
+          "rs_3m_pct": 12.34,
+          "rsi": 71.7,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 7.86,
+          "ret_5d_pct": 9.54,
+          "atr_pct": 2.72,
+          "entry": 226.59,
+          "stop": 217.39,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.06,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 249.25,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.0,
+          "rr": 2.46,
+          "rr_after_costs": 2.22,
+          "nearest_resistance": null,
+          "qty": 1.13,
+          "position_value": 256.05,
+          "risk_amount": 10.4,
+          "rs_1m_vs_category_pct": 15.08,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IJH 1M",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%",
+            "earnings in first 5 days (−1)"
+          ],
+          "adx": 24.76,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Morningstar, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Financial Services",
+            "industry": "Financial Data & Stock Exchanges",
+            "market_cap": 8451432448,
+            "float_shares": 19580959,
+            "inst_pct": 66.17,
+            "short_pct_float": 6.34,
+            "days_to_cover": 4.63,
+            "ttm_eps": 10.51,
+            "net_debt_to_ebitda": 2.03
+          },
+          "next_earnings": {
+            "date": "2026-10-28",
+            "timing": "AMC",
+            "trading_days_ahead": 2
+          },
+          "qty_note": "halved: earnings in first 5 trading days",
+          "name": "Morningstar, Inc."
+        },
+        {
+          "symbol": "BJ",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [],
+          "unverified": [],
+          "last_close": 106.36,
+          "exchange": "NYSE",
+          "adv_usd_m": 228.04,
+          "avg_volume_shares": 2292814.0,
+          "volume_ratio": 0.65,
+          "rs_1m_pct": 14.29,
+          "rs_3m_pct": 5.96,
+          "rsi": 70.54,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 5.57,
+          "ret_5d_pct": 3.65,
+          "atr_pct": 2.62,
+          "entry": 107.95,
+          "stop": 103.77,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.87,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 118.75,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.0,
+          "rr": 2.58,
+          "rr_after_costs": 2.33,
+          "nearest_resistance": null,
+          "qty": 4.86,
+          "position_value": 524.64,
+          "risk_amount": 20.31,
+          "rs_1m_vs_category_pct": 13.53,
+          "score": 4.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IJH 1M",
+            "MACD near/above 0",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 25.88,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "BJ's Wholesale Club Holdings, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "market_cap": 13434829824,
+            "float_shares": 125637645,
+            "inst_pct": 111.16,
+            "short_pct_float": 8.42,
+            "days_to_cover": 6.3,
+            "ttm_eps": 4.57,
+            "net_debt_to_ebitda": 2.36
+          },
+          "next_earnings": {
+            "date": "2026-11-20",
+            "timing": "BMO",
+            "trading_days_ahead": 19
+          },
+          "name": "BJ's Wholesale Club Holdings, Inc."
+        },
+        {
+          "symbol": "AVTR",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-10-28 BMO"
+          ],
+          "unverified": [],
+          "last_close": 17.29,
+          "exchange": "NYSE",
+          "adv_usd_m": 148.2,
+          "avg_volume_shares": 9216826.65,
+          "volume_ratio": 0.72,
+          "rs_1m_pct": 14.26,
+          "rs_3m_pct": 34.75,
+          "rsi": 73.33,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 6.78,
+          "ret_5d_pct": 6.14,
+          "atr_pct": 2.75,
+          "entry": 17.41,
+          "stop": 16.7,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.08,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 19.15,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 9.99,
+          "rr": 2.45,
+          "rr_after_costs": 2.21,
+          "nearest_resistance": null,
+          "qty": 14.79,
+          "position_value": 257.49,
+          "risk_amount": 10.5,
+          "rs_1m_vs_category_pct": 13.5,
+          "score": 3.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IJH 1M",
+            "MACD near/above 0",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%",
+            "earnings in first 5 days (−1)"
+          ],
+          "adx": 40.83,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Avantor, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Healthcare",
+            "industry": "Medical Instruments & Supplies",
+            "market_cap": 11694244864,
+            "float_shares": 657806317,
+            "inst_pct": 105.54,
+            "short_pct_float": 7.06,
+            "days_to_cover": 4.47,
+            "ttm_eps": -0.84,
+            "net_debt_to_ebitda": 3.59
+          },
+          "next_earnings": {
+            "date": "2026-10-28",
+            "timing": "BMO",
+            "trading_days_ahead": 2
+          },
+          "qty_note": "halved: earnings in first 5 trading days",
+          "name": "Avantor, Inc."
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 400
+        },
+        {
+          "step": "enough price history",
+          "remaining": 400
+        },
+        {
+          "step": "price floor",
+          "remaining": 400
+        },
+        {
+          "step": "listing checks",
+          "remaining": 398
+        },
+        {
+          "step": "no reverse split / wild gaps",
+          "remaining": 398
+        },
+        {
+          "step": "liquidity",
+          "remaining": 398
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 138
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 133
+        },
+        {
+          "step": "3M relative strength vs SPY > 0",
+          "remaining": 84
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 73
+        },
+        {
+          "step": "named setup",
+          "remaining": 37
+        },
+        {
+          "step": "not overextended",
+          "remaining": 32
+        },
+        {
+          "step": "ATR band",
+          "remaining": 29
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 23
+        },
+        {
+          "step": "target & R:R after costs",
+          "remaining": 4
+        },
+        {
+          "step": "position size",
+          "remaining": 4
+        },
+        {
+          "step": "short interest / fund type",
+          "remaining": 4
+        }
+      ],
+      "target_step_failures": {
+        "resistance too close": 13,
+        "R:R after costs < min": 6
+      }
+    },
+    "SP600": {
+      "label": "SmallCap 600",
+      "universe_size": 600,
+      "membership_proxy": false,
+      "universe_source": "downloaded (Wikipedia, 603 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "passed_all_hard_filters": 6,
+      "profile_checked": 6,
+      "candidates": [
+        {
+          "symbol": "LQDT",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [],
+          "unverified": [],
+          "last_close": 45.42,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 10.75,
+          "avg_volume_shares": 248794.7,
+          "volume_ratio": 0.93,
+          "rs_1m_pct": 4.96,
+          "rs_3m_pct": 11.79,
+          "rsi": 65.79,
+          "setup": "Pullback to 20 EMA",
+          "setup_family": "pullback",
+          "other_setups": [],
+          "pct_above_ema20": 4.16,
+          "ret_5d_pct": 5.43,
+          "atr_pct": 2.35,
+          "entry": 45.42,
+          "stop": 43.82,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.52,
+          "entry_type": "LMT",
+          "entry_note": "limit at last close",
+          "target": 49.9,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 9.86,
+          "rr": 2.8,
+          "rr_after_costs": 2.5,
+          "nearest_resistance": null,
+          "qty": 11.56,
+          "position_value": 525.06,
+          "risk_amount": 18.5,
+          "rs_1m_vs_category_pct": 3.67,
+          "score": 5.5,
+          "score_notes": [
+            "1M RS+",
+            "beats IJR 1M",
+            "MACD>0",
+            "trend ADX≥20",
+            "R:R 2.5",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 23.31,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Liquidity Services, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "market_cap": 1423081984,
+            "float_shares": 23749680,
+            "inst_pct": 80.76,
+            "short_pct_float": 5.0,
+            "days_to_cover": 4.38,
+            "ttm_eps": 1.02,
+            "net_debt_to_ebitda": -4.37
+          },
+          "next_earnings": {
+            "date": "2026-11-19",
+            "timing": "BMO",
+            "trading_days_ahead": 18
+          },
+          "name": "Liquidity Services, Inc."
+        },
+        {
+          "symbol": "LTC",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-03 AMC"
+          ],
+          "unverified": [],
+          "last_close": 43.96,
+          "exchange": "NYSE",
+          "adv_usd_m": 24.75,
+          "avg_volume_shares": 577839.95,
+          "volume_ratio": 0.62,
+          "rs_1m_pct": 3.18,
+          "rs_3m_pct": 1.58,
+          "rsi": 59.58,
+          "setup": "Pullback to 20 EMA",
+          "setup_family": "pullback",
+          "other_setups": [],
+          "pct_above_ema20": 2.37,
+          "ret_5d_pct": 3.88,
+          "atr_pct": 2.03,
+          "entry": 43.96,
+          "stop": 42.62,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 3.05,
+          "entry_type": "LMT",
+          "entry_note": "limit at last close",
+          "target": 47.77,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 8.67,
+          "rr": 2.84,
+          "rr_after_costs": 2.5,
+          "nearest_resistance": null,
+          "qty": 11.95,
+          "position_value": 525.32,
+          "risk_amount": 16.01,
+          "rs_1m_vs_category_pct": 1.9,
+          "score": 5.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IJR 1M",
+            "RSI turning up",
+            "MACD>0",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 18.0,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "LTC Properties, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Real Estate",
+            "industry": "REIT - Healthcare Facilities",
+            "market_cap": 2369688576,
+            "float_shares": 52758992,
+            "inst_pct": 84.26,
+            "short_pct_float": 7.22,
+            "days_to_cover": 5.13,
+            "ttm_eps": 2.88,
+            "net_debt_to_ebitda": 5.61
+          },
+          "next_earnings": {
+            "date": "2026-11-03",
+            "timing": "AMC",
+            "trading_days_ahead": 6
+          },
+          "name": "LTC Properties, Inc."
+        },
+        {
+          "symbol": "UFCS",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-03 AMC"
+          ],
+          "unverified": [],
+          "last_close": 57.58,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 6.17,
+          "avg_volume_shares": 111162.1,
+          "volume_ratio": 0.89,
+          "rs_1m_pct": 8.81,
+          "rs_3m_pct": 5.64,
+          "rsi": 63.94,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 2.8,
+          "ret_5d_pct": 2.62,
+          "atr_pct": 2.57,
+          "entry": 58.28,
+          "stop": 56.04,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 3.84,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 64.11,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.0,
+          "rr": 2.6,
+          "rr_after_costs": 2.34,
+          "nearest_resistance": null,
+          "qty": 9.01,
+          "position_value": 525.1,
+          "risk_amount": 20.18,
+          "rs_1m_vs_category_pct": 7.47,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "beats IJR 1M",
+            "MACD near/above 0",
+            "stop under swing low",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 14.31,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "United Fire Group, Inc.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "market_cap": 1477282048,
+            "float_shares": 22203587,
+            "inst_pct": 70.46,
+            "short_pct_float": 2.62,
+            "days_to_cover": 3.0,
+            "ttm_eps": 5.39,
+            "net_debt_to_ebitda": 0.03
+          },
+          "next_earnings": {
+            "date": "2026-11-03",
+            "timing": "AMC",
+            "trading_days_ahead": 6
+          },
+          "name": "United Fire Group, Inc."
+        },
+        {
+          "symbol": "DRH",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-03 AMC"
+          ],
+          "unverified": [],
+          "last_close": 13.94,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 44.78,
+          "avg_volume_shares": 3439662.4,
+          "volume_ratio": 0.89,
+          "rs_1m_pct": 12.48,
+          "rs_3m_pct": 3.24,
+          "rsi": 71.92,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 5.54,
+          "ret_5d_pct": 3.57,
+          "atr_pct": 2.35,
+          "entry": 14.08,
+          "stop": 13.44,
+          "stop_basis": "below 5-day swing low",
+          "risk_pct": 4.55,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 15.49,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.01,
+          "rr": 2.2,
+          "rr_after_costs": 2.0,
+          "nearest_resistance": null,
+          "qty": 32.83,
+          "position_value": 462.25,
+          "risk_amount": 21.01,
+          "rs_1m_vs_category_pct": 11.1,
+          "score": 4.5,
+          "score_notes": [
+            "1M RS+",
+            "beats IJR 1M",
+            "MACD near/above 0",
+            "stop under swing low",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 34.77,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "DiamondRock Hospitality Company",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Real Estate",
+            "industry": "REIT - Hotel & Motel",
+            "market_cap": 2863123968,
+            "float_shares": 201992866,
+            "inst_pct": 116.25,
+            "short_pct_float": 9.18,
+            "days_to_cover": 4.37,
+            "ttm_eps": 0.72,
+            "net_debt_to_ebitda": 3.64
+          },
+          "next_earnings": {
+            "date": "2026-11-03",
+            "timing": "AMC",
+            "trading_days_ahead": 6
+          },
+          "name": "DiamondRock Hospitality Company"
+        },
+        {
+          "symbol": "WAY",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-02 AMC"
+          ],
+          "unverified": [],
+          "last_close": 28.69,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 57.87,
+          "avg_volume_shares": 2139489.3,
+          "volume_ratio": 0.64,
+          "rs_1m_pct": 17.06,
+          "rs_3m_pct": 17.23,
+          "rsi": 63.97,
+          "setup": "NR7 near resistance",
+          "setup_family": "consolidation",
+          "other_setups": [],
+          "pct_above_ema20": 4.89,
+          "ret_5d_pct": 2.5,
+          "atr_pct": 3.58,
+          "entry": 28.94,
+          "stop": 27.91,
+          "stop_basis": "1× ATR",
+          "risk_pct": 3.56,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 31.83,
+          "target_basis": "just below resistance 33.27",
+          "target_pct": 9.99,
+          "rr": 2.81,
+          "rr_after_costs": 2.51,
+          "nearest_resistance": 33.27,
+          "qty": 9.07,
+          "position_value": 262.49,
+          "risk_amount": 9.34,
+          "rs_1m_vs_category_pct": 15.62,
+          "score": 3.5,
+          "score_notes": [
+            "1M RS+",
+            "beats IJR 1M",
+            "MACD near/above 0",
+            "R:R 2.5",
+            "float ≥10M",
+            "inst ≥20%",
+            "earnings in first 5 days (−1)"
+          ],
+          "adx": 34.54,
+          "macd_above_signal": true,
+          "profile": {
+            "name": "Waystar Holding Corp.",
+            "quote_type": "EQUITY",
+            "country": "United States",
+            "sector": "Healthcare",
+            "industry": "Health Information Services",
+            "market_cap": 5501262336,
+            "float_shares": 139320564,
+            "inst_pct": 113.02,
+            "short_pct_float": 9.58,
+            "days_to_cover": 7.86,
+            "ttm_eps": 0.7,
+            "net_debt_to_ebitda": 2.97
+          },
+          "next_earnings": {
+            "date": "2026-11-02",
+            "timing": "AMC",
+            "trading_days_ahead": 5
+          },
+          "qty_note": "halved: earnings in first 5 trading days",
+          "name": "Waystar Holding Corp."
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 600
+        },
+        {
+          "step": "enough price history",
+          "remaining": 589
+        },
+        {
+          "step": "price floor",
+          "remaining": 574
+        },
+        {
+          "step": "listing checks",
+          "remaining": 572
+        },
+        {
+          "step": "no reverse split / wild gaps",
+          "remaining": 571
+        },
+        {
+          "step": "liquidity",
+          "remaining": 565
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 227
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 218
+        },
+        {
+          "step": "3M relative strength vs SPY > 0",
+          "remaining": 117
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 101
+        },
+        {
+          "step": "named setup",
+          "remaining": 55
+        },
+        {
+          "step": "not overextended",
+          "remaining": 50
+        },
+        {
+          "step": "ATR band",
+          "remaining": 48
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 23
+        },
+        {
+          "step": "target & R:R after costs",
+          "remaining": 6
+        },
+        {
+          "step": "position size",
+          "remaining": 6
+        },
+        {
+          "step": "short interest / fund type",
+          "remaining": 6
+        }
+      ],
+      "target_step_failures": {
+        "resistance too close": 16,
+        "R:R after costs < min": 1
+      }
+    },
+    "MICRO": {
+      "label": "Microcap",
+      "universe_size": 451,
+      "membership_proxy": true,
+      "universe_source": "downloaded (PROXY: Nasdaq screener, market cap $50M–$300M, price ≥ $5, 451 stocks) — earlier sources failed: iShares holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']; BlackRock holdings: no 'Ticker' header row in holdings file [got text/csv;charset=UTF-8: '<!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\" prefix=\"og: http://ogp.me/ns#\"']",
+      "passed_all_hard_filters": 1,
+      "profile_checked": 1,
+      "candidates": [
+        {
+          "symbol": "AUDC",
+          "passed": true,
+          "steps_passed": 16,
+          "flags": [
+            "⚠ Earnings on 2026-11-04 BMO"
+          ],
+          "unverified": [],
+          "last_close": 11.47,
+          "exchange": "Nasdaq",
+          "adv_usd_m": 1.34,
+          "avg_volume_shares": 120369.95,
+          "volume_ratio": 0.67,
+          "rs_1m_pct": 8.44,
+          "rs_3m_pct": 13.64,
+          "rsi": 64.23,
+          "setup": "Bull flag / tight consolidation",
+          "setup_family": "consolidation",
+          "other_setups": [
+            "Pullback to 20 EMA"
+          ],
+          "pct_above_ema20": 3.36,
+          "ret_5d_pct": 2.96,
+          "atr_pct": 3.05,
+          "entry": 11.6,
+          "stop": 11.08,
+          "stop_basis": "1.5× ATR",
+          "risk_pct": 4.48,
+          "entry_type": "BS",
+          "entry_note": "buy-stop just above today's high",
+          "target": 12.76,
+          "target_basis": "no overhead resistance (2.5R after costs, at least the minimum move)",
+          "target_pct": 10.0,
+          "rr": 2.23,
+          "rr_after_costs": 2.03,
+          "nearest_resistance": null,
+          "qty": 40.41,
+          "position_value": 468.76,
+          "risk_amount": 21.01,
+          "rs_1m_vs_category_pct": 14.46,
+          "score": 5.0,
+          "score_notes": [
+            "1M RS+",
+            "beats IWC 1M",
+            "MACD near/above 0",
+            "MACD hist rising",
+            "near 52W high",
+            "float ≥10M",
+            "inst ≥20%"
+          ],
+          "adx": 21.21,
+          "macd_above_signal": false,
+          "profile": {
+            "name": "AudioCodes Ltd.",
+            "quote_type": "EQUITY",
+            "country": "Israel",
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "market_cap": 277032544,
+            "float_shares": 14070638,
+            "inst_pct": 39.43,
+            "short_pct_float": 1.12,
+            "days_to_cover": 1.81,
+            "ttm_eps": 0.26,
+            "net_debt_to_ebitda": -1.07
+          },
+          "next_earnings": {
+            "date": "2026-11-04",
+            "timing": "BMO",
+            "trading_days_ahead": 7
+          },
+          "name": "AudioCodes Ltd."
+        }
+      ],
+      "closest_miss": null,
+      "funnel": [
+        {
+          "step": "universe",
+          "remaining": 451
+        },
+        {
+          "step": "enough price history",
+          "remaining": 413
+        },
+        {
+          "step": "price floor",
+          "remaining": 406
+        },
+        {
+          "step": "listing checks",
+          "remaining": 392
+        },
+        {
+          "step": "no reverse split / wild gaps",
+          "remaining": 357
+        },
+        {
+          "step": "liquidity",
+          "remaining": 117
+        },
+        {
+          "step": "primary uptrend (50 EMA, 200)",
+          "remaining": 30
+        },
+        {
+          "step": "20 EMA",
+          "remaining": 25
+        },
+        {
+          "step": "3M relative strength vs SPY > 0",
+          "remaining": 24
+        },
+        {
+          "step": "RSI 40-75",
+          "remaining": 22
+        },
+        {
+          "step": "named setup",
+          "remaining": 12
+        },
+        {
+          "step": "not overextended",
+          "remaining": 9
+        },
+        {
+          "step": "ATR band",
+          "remaining": 7
+        },
+        {
+          "step": "stop within limit",
+          "remaining": 3
+        },
+        {
+          "step": "target & R:R after costs",
+          "remaining": 1
+        },
+        {
+          "step": "position size",
+          "remaining": 1
+        },
+        {
+          "step": "short interest / fund type",
+          "remaining": 1
+        }
+      ],
+      "target_step_failures": {
+        "resistance too close": 2,
+        "R:R after costs < min": 0
+      }
+    }
+  }
+}
