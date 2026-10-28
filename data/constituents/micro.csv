@@ -6,9 +6,10 @@ ACU,Acme United Corporation. Common Stock,Consumer Discretionary,proxy
 ACV,Virtus Diversified Income & Convertible Fund Common Shares of Beneficial Interest,Finance,proxy
 AEHL,Antelope Enterprise Holdings Limited Class A Ordinary Shares,Consumer Discretionary,proxy
 AEYE,AudioEye Inc. Common Stock,Technology,proxy
-AGEN,Agenus Inc. Common Stock,Health Care,proxy
 AGPU,Axe Compute Inc. Common Stock,Health Care,proxy
+AIOK,AI OKTO CORP. Common Stock,Consumer Discretionary,proxy
 AIOS,AIOS Tech Inc. Class A Common Shares,Industrials,proxy
+AIRO,AIRO Group Holdings Inc. Common Stock,Industrials,proxy
 AIRT,Air T Inc. Common Stock,Consumer Discretionary,proxy
 AIRTP,Air T Inc. Air T Funding Alpha Income Trust Preferred Securities,Consumer Discretionary,proxy
 AKA,a.k.a. Brands Holding Corp. Common Stock,Consumer Discretionary,proxy
@@ -27,16 +28,13 @@ AP,Ampco-Pittsburgh Corporation Common Stock,Industrials,proxy
 APC,ARKO Petroleum Corp. Class A Common Stock,Energy,proxy
 APLM,Apollomics Inc. Class A Ordinary Shares,Health Care,proxy
 APT,Alpha Pro Tech Ltd. Common Stock,Health Care,proxy
-ARCT,Arcturus Therapeutics Holdings Inc. Common Stock,Health Care,proxy
 ARDC,Ares Dynamic Credit Allocation Fund Inc. Common Shares,Finance,proxy
 ARL,American Realty Investors Inc. Common Stock,Finance,proxy
-ARQQ,Arqit Quantum Inc. Ordinary Shares,Technology,proxy
 ASBH,American Savings Bank N.A. Common Stock,,proxy
 ASPS,Altisource Portfolio Solutions S.A. Common Stock,Consumer Discretionary,proxy
 ASUR,Asure Software Inc Common Stock,Technology,proxy
 ASYS,Amtech Systems Inc. Common Stock,Technology,proxy
 ATGL,Alpha Technology Group Limited Class A Ordinary Shares,Technology,proxy
-ATLO,Ames National Corporation Common Stock,Finance,proxy
 ATRA,Atara Biotherapeutics Inc. Common Stock,Health Care,proxy
 AUBN,Auburn National Bancorporation Inc. Common Stock,Finance,proxy
 AUC,ATIF Holdings Limited Ordinary Shares,Consumer Discretionary,proxy
@@ -47,20 +45,20 @@ AZ,A2Z Cust2Mate Solutions Corp. Common Shares,Industrials,proxy
 BAFN,BayFirst Financial Corp. Common Stock,Finance,proxy
 BANX,ArrowMark Financial Corp. Common Stock,Finance,proxy
 BARK,BARK Inc. Class A Common Stock,Consumer Discretionary,proxy
-BBW,Build-A-Bear Workshop Inc. Common Stock,Consumer Discretionary,proxy
 BCBP,BCB Bancorp Inc. (NJ) Common Stock,Finance,proxy
 BCIC,BCP Investment Corporation Common Stock,Finance,proxy
 BDL,Flanigan's Enterprises Inc. Common Stock,Consumer Discretionary,proxy
 BDSX,Biodesix Inc. Common Stock,Health Care,proxy
 BEBE,TGE Value Creative Solutions Corp Class A Ordinary Shares,Consumer Discretionary,proxy
 BGM,BGM Group Ltd. Class A Ordinary Shares,Health Care,proxy
+BIOA,BioAge Labs Inc. Common Stock,Health Care,proxy
 BIPI,BIP Bermuda Holdings I Limited 5.125% Perpetual Subordinated Notes,Consumer Discretionary,proxy
+BKKT,Bakkt Inc. Class A Common Stock,Finance,proxy
 BKTI,BK Technologies Corporation Common Stock,Technology,proxy
 BLUW,Blue Water Acquisition Corp. III Class A Ordinary Shares,,proxy
 BMEZ,BlackRock Health Sciences Term Trust Common Shares of Beneficial Interest,Finance,proxy
 BNC,BNB Standard Corporation Common Stock,Consumer Staples,proxy
 BNR,Burning Rock Biotech Limited American Depositary Shares,Health Care,proxy
-BNTC,Benitec Biopharma Inc. Common Stock,Health Care,proxy
 BOOM,DMC Global Inc. Common Stock,Industrials,proxy
 BOTJ,Bank of the James Financial Group Inc. Common Stock,Finance,proxy
 BRCC,BRC Inc. Class A Common Stock,Consumer Staples,proxy
@@ -83,6 +81,7 @@ CHWM,Chilwa Minerals Limited American Depository Shares,,proxy
 CING,Cingulate Inc. Common Stock,Health Care,proxy
 CLPT,ClearPoint Neuro Inc. Common Stock,Health Care,proxy
 CLST,Catalyst Bancorp Inc. Common Stock,Finance,proxy
+CLW,Clearwater Paper Corporation Common Stock,Basic Materials,proxy
 CMT,Core Molding Technologies Inc Common Stock,Industrials,proxy
 CMTV,Community Bancorp. Common Stock,Finance,proxy
 COCH,Envoy Medical Inc. Class A Common Stock,Health Care,proxy
@@ -96,7 +95,8 @@ CPZ,Calamos Long/Short Equity & Dynamic Income Trust Common Stock,Finance,proxy
 CRT,Cross Timbers Royalty Trust Common Stock,Energy,proxy
 CSPI,CSP Inc. Common Stock,Technology,proxy
 CUE,Cue Biopharma Inc. Common Stock,Health Care,proxy
-CVEO,Civeo Corporation (Canada) Common Shares,Consumer Discretionary,proxy
+CUVL,Clinuvel Pharmaceuticals Limited American Depositary Shares,Miscellaneous,proxy
+CVU,CPI Aerostructures Inc. Common Stock,Industrials,proxy
 CXDO,Crexendo Inc. Common Stock,Telecommunications,proxy
 CZWI,Citizens Community Bancorp Inc. Common Stock,Finance,proxy
 DIT,AMCON Distributing Company Common Stock,Consumer Discretionary,proxy
@@ -105,7 +105,6 @@ DTF,DTF Tax-Free Income 2028 Term Fund Inc. Common Stock,Finance,proxy
 DTIL,Precision BioSciences Inc. Common Stock,Health Care,proxy
 DUOT,Duos Technologies Group Inc. Common Stock,Technology,proxy
 DXR,Daxor Corporation Common Stock,Health Care,proxy
-EAF,GrafTech International Ltd. Common Stock,Energy,proxy
 EBMT,Eagle Bancorp Montana Inc. Common Stock,Finance,proxy
 ECBK,ECB Bancorp Inc. Common Stock,Finance,proxy
 ECOR,electroCore Inc. Common Stock,Health Care,proxy
@@ -116,7 +115,6 @@ EGG,Enigmatig Limited Class A Ordinary Shares,Consumer Discretionary,proxy
 EIC,Eagle Point Income Company Common Shares of Beneficial Interest,Finance,proxy
 EICA,Eagle Point Income Company 5.00% Series A Term Preferred Shares due 2026,Finance,proxy
 ELA,Envela Corporation Common Stock,Consumer Discretionary,proxy
-ELLO,Ellomay Capital Ltd Ordinary Shares (Israel),Utilities,proxy
 ELMD,Electromed Inc. Common Stock,Health Care,proxy
 ELOX,Eloxx Pharmaceuticals Inc. Common Stock,Health Care,proxy
 ELVA,Electrovaya Inc. Common Shares,Miscellaneous,proxy
@@ -141,16 +139,17 @@ FDSB,Fifth District Bancorp Inc. Common Stock,Finance,proxy
 FF,FutureFuel Corp.  Common shares,Industrials,proxy
 FGBI,First Guaranty Bancshares Inc. Common Stock,Finance,proxy
 FGBIP,First Guaranty Bancshares Inc. 6.75% Series A Fixed-Rate Non-Cumulative Perpetual Preferred Stock,Finance,proxy
+FGCPP,FG Communities Holdings Inc. 8.00% Cumulative Preferred Stock,Finance,proxy
 FINS,Angel Oak Financial Strategies Income Term Trust Common Shares of Beneficial Interest,Finance,proxy
 FINW,FinWise Bancorp Common Stock,Finance,proxy
 FIRY,Firy Inc. Class A Common Stock,Technology,proxy
+FLXS,Flexsteel Industries Inc. Common Stock,Consumer Discretionary,proxy
 FNRN,First Northern Community Bancorp Common stock,Finance,proxy
 FNWB,First Northwest Bancorp Common Stock,Finance,proxy
 FNWD,Finward Bancorp Common Stock,Finance,proxy
 FOA,Finance of America Companies Inc. Class A Common Stock,Finance,proxy
 FORR,Forrester Research Inc. Common Stock,Industrials,proxy
 FRAF,Franklin Financial Services Corporation Common Stock,Finance,proxy
-FRD,Friedman Industries Inc. Common Stock,Industrials,proxy
 FSI,Flexible Solutions International Inc. Common Stock (CDA),Industrials,proxy
 FT,Franklin Universal Trust Common Stock,Finance,proxy
 FTF,Franklin Limited Duration Income Trust Common Shares of Beneficial Interest,Finance,proxy
@@ -194,7 +193,6 @@ ICCC,ImmuCell Corporation Common Stock,Health Care,proxy
 III,Information Services Group Inc. Common Stock,Consumer Discretionary,proxy
 ILLU,Illumination Acquisition Corp I Class A Ordinary Shares,Finance,proxy
 IMMR,Immersion Corporation Common Stock,Technology,proxy
-IMPP,Imperial Petroleum Inc. Common Shares,Consumer Discretionary,proxy
 IMUX,Immunic Inc. Common Stock,Health Care,proxy
 IMXI,International Money Express Inc. Common Stock,Consumer Discretionary,proxy
 INBK,First Internet Bancorp Common Stock,Finance,proxy
@@ -237,11 +235,13 @@ LMNR,Limoneira Co Common Stock,Consumer Staples,proxy
 LNSR,LENSAR Inc. Common Stock,Health Care,proxy
 LOVE,The Lovesac Company Common Stock,Consumer Discretionary,proxy
 LSBK,Lake Shore Bancorp Inc. Common Stock,Finance,proxy
+LTBR,Lightbridge Corporation Common Stock,Basic Materials,proxy
 LTRX,Lantronix Inc. Common Stock,Telecommunications,proxy
 LYEL,Lyell Immunopharma Inc. Common Stock,Health Care,proxy
 MAYS,J. W. Mays Inc. Common Stock,Real Estate,proxy
 MDWD,MediWound Ltd. Ordinary Shares,Health Care,proxy
 MED,MEDIFAST INC Common Stock,Consumer Staples,proxy
+MF,MindForge Inc. Class A Ordinary Shares,Technology,proxy
 MFIN,Medallion Financial Corp. Common Stock,Finance,proxy
 MFM,Aberdeen Municipal Income Fund Common Shares of Beneficial Interest,Finance,proxy
 MGYR,Magyar Bancorp Inc. Common Stock,Finance,proxy
@@ -261,7 +261,6 @@ MRDN,Meridian Holdings Inc. Common Stock,Technology,proxy
 MSB,Mesabi Trust Common Stock,Industrials,proxy
 MSLE,Satellos Bioscience Inc. Common Stock,Health Care,proxy
 MTRX,Matrix Service Company Common Stock,Consumer Discretionary,proxy
-MYFW,First Western Financial Inc. Common Stock,Finance,proxy
 NAKA,Nakamoto Inc. Common Stock,Health Care,proxy
 NATR,Nature's Sunshine Products Inc. Common Stock,Health Care,proxy
 NC,NACCO Industries Inc. Common Stock,Energy,proxy
@@ -295,6 +294,7 @@ OPI,Office Properties Income Trust Common shares of beneficial interest,Finance,
 OPRX,OptimizeRx Corporation Common Stock,Consumer Discretionary,proxy
 OPTX,Syntec Optics Holdings Inc. Class A Common Stock,Technology,proxy
 OPXS,Optex Systems Holdings Inc. Common Stock,Technology,proxy
+ORIQU,Origin Investment Corp I Units,,proxy
 OSS,One Stop Systems Inc. Common Stock,Technology,proxy
 OVBC,Ohio Valley Banc Corp. Common Stock,Finance,proxy
 OVLY,Oak Valley Bancorp (CA) Common Stock,Finance,proxy
@@ -315,7 +315,7 @@ PINE,Alpine Income Property Trust Inc. Common Stock,Real Estate,proxy
 PLAY,Dave & Buster's Entertainment Inc. Common Stock,Consumer Discretionary,proxy
 PMM,Franklin Managed Municipal Income Trust Shares of Beneficial Interest,Finance,proxy
 PMN,ProMIS Neurosciences Inc. Common Shares (ON),Health Care,proxy
-PPHC,Public Policy Holding Company Inc. Common Stock,,proxy
+PMTS,CPI Card Group Inc. Common Stock,Consumer Discretionary,proxy
 PPIH,Perma-Pipe International Holdings Inc. Common Stock,Industrials,proxy
 PROF,Profound Medical Corp. Common Stock,Health Care,proxy
 PROV,Provident Financial Holdings Inc. Common Stock,Finance,proxy
@@ -366,7 +366,6 @@ SAR,Saratoga Investment Corp New,Finance,proxy
 SBFG,SB Financial Group Inc. Common Stock,Finance,proxy
 SBMT,Silver Bow Mining Corp. Common Shares,Basic Materials,proxy
 SCM,Stellus Capital Investment Corporation Common Stock,Finance,proxy
-SCTX,Scribe Therapeutics Inc. Common Stock,Health Care,proxy
 SEG,Seaport Entertainment Group Inc. Common Stock,Consumer Discretionary,proxy
 SEVN,Seven Hills Realty Trust Common Stock,Real Estate,proxy
 SFBC,Sound Financial Bancorp Inc. Common Stock,Finance,proxy
@@ -410,7 +409,6 @@ TRAK,ReposiTrak Inc. Common Stock,Technology,proxy
 TRT,Trio-Tech International Common Stock,Technology,proxy
 TSSI,TSS Inc. Common Stock,Consumer Discretionary,proxy
 TVGN,Tevogen Inc. Common Stock,Health Care,proxy
-TZOO,Travelzoo Common Stock,Consumer Discretionary,proxy
 UBCP,United Bancorp Inc. Common Stock,Finance,proxy
 UEIC,Universal Electronics Inc. Common Stock,Consumer Staples,proxy
 UFI,Unifi Inc. New Common Stock,Consumer Discretionary,proxy
@@ -418,6 +416,7 @@ ULBI,Ultralife Corporation Common Stock,Miscellaneous,proxy
 UNB,Union Bankshares Inc. Common Stock,Finance,proxy
 USAU,U.S. Gold Corp. Common Stock,Basic Materials,proxy
 USDE,StablecoinX Inc. Class A Common Stock,Finance,proxy
+USGO,U.S. GoldMining Inc. Common stock,Basic Materials,proxy
 USNA,USANA Health Sciences Inc. Common Stock,Health Care,proxy
 UTMD,Utah Medical Products Inc. Common Stock,Health Care,proxy
 VABK,Virginia National Bankshares Corporation Common Stock,Finance,proxy
@@ -443,6 +442,7 @@ WSTN,Westin Acquisition Corp Class A Ordinary Share,Technology,proxy
 WW,WW International Inc.  Common Stock,Consumer Discretionary,proxy
 WYY,WidePoint Corporation Common Stock,Technology,proxy
 XGN,Exagen Inc. Common Stock,Health Care,proxy
+XLO,Xilio Therapeutics Inc. Common Stock,Health Care,proxy
 XPER,Xperi Inc. Common Stock,Technology,proxy
 YARW,Yarrow Bioscience Inc. Common Stock,Health Care,proxy
 ZOOZ,ZOOZ Strategy Ltd. Ordinary Shares,Technology,proxy
